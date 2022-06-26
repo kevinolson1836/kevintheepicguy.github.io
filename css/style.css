@@ -9,6 +9,12 @@ body {
   background: #282828;
 }
 
+.face{
+  position: absolute;
+  left: 100px;
+  top: 150px;
+}
+
 /* Header/Blog Title */
 .header {
   padding: 30px;
@@ -16,6 +22,7 @@ body {
   text-align: center;
   background: #595959;
   background-image: url('test.jpg');
+  font-family: "Orbitron", sans-serif;
 }
 
 /* Create two unequal columns that floats next to each other */
