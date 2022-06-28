@@ -2,12 +2,14 @@
 <html>
 
     <head>
+		
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
     </head>
 
   <body>
+	
 
     <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
 
@@ -109,9 +111,10 @@
 
 				//
 
-				renderer = new THREE.WebGLRenderer( { alpha: true } );
+				renderer = new THREE.WebGLRenderer( { alpha: true, canvas: document.getElementById( 'canvasdd' ) } );
 				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.setSize( window.innerWidth/3, window.innerHeight/3);
+				// render.style("display: block")
 				container.appendChild( renderer.domElement );
 
 				document.addEventListener( 'mousemove', onDocumentMouseMove );
@@ -155,7 +158,7 @@
 				camera.position.x += ( -mouseX - camera.position.x ) * .05;
 				camera.position.y -= (  -mouseY + camera.position.y ) * .05;
 
-				console.log("x:", camera.position.x, "y:", camera.position.y)
+				// console.log("x:", camera.position.x, "y:", camera.position.y)
 				camera.lookAt( scene.position );
 
 				renderer.render( scene, camera );
@@ -174,12 +177,21 @@
     </div>
 
 
-    <!-- header on top page -->
-    <div id="myCanvas" class="header">
-      <h2 >Welcome (WIP)</h2>
-    </div>
 
-    <!-- spacer div -->
+    <!-- header on top page -->
+    <div id="myCanvas" class="header" >
+		<canvas id="canvasdd"></canvas>
+      <h2 >Welcome (WIP)</h2>
+	  <div class="loader">
+		<div style="text-align: center;">
+			loading model...
+		</div>
+	  </div>
+	  
+	 
+
+    </div>
+	    <!-- spacer div -->
     <div class="sapcer"></div>
 
       <div class="ghostBox">
@@ -205,4 +217,36 @@
     </div>
 
   </body>
+  <style>
+	.loader {
+		-webkit-animation: load-out 1s;
+		animation: load-out 1s;
+		-webkit-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+	}
+	
+	@-webkit-keyframes load-out {
+		from {
+			top: 0;
+			opacity: 1;
+		}
+	
+		to {
+			top: 100%;
+			opacity: 0;
+		}
+	}
+	
+	@keyframes load-out {
+		from {
+			top: 0;
+			opacity: 1;
+		}
+	
+		to {
+			top: 100%;
+			opacity: 0;
+		}
+	}
+	</style>
 </html>
