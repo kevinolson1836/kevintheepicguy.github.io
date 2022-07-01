@@ -17,8 +17,24 @@ body {
   font-family: Arial;
   padding: 60px;
   /* background: #ffbf47; */
-  background-image: url('/img/bg1.png');
+  background-image: url('/img/bg5.png');
   /* background-size: auto; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.imgbox {
+  display: grid;
+  height: 100%;
+}
+
+.center-fit {
+  max-width: 100%;
+  max-height: 100vh;
+  margin: auto;
 }
 
 .face{
