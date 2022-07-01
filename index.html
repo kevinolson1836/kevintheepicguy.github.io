@@ -8,9 +8,11 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
     </head>
 
-  <body style=" background-image:url(/img/bg.png);
-				background-repeat:no-repeat;
-				background-size:contain;
+  <body style="  background: url('/img/bg.png') no-repeat center center fixed;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover; 
 				background-size: 100% 100%;">
 
 		<script type="importmap">
@@ -121,7 +123,7 @@
 
 				renderer = new THREE.WebGLRenderer( { alpha: true, canvas: document.getElementById( 'canvasdd' ) } );
 				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( window.innerWidth * 0.7, window.innerHeight *0.7);
+				renderer.setSize( window.innerWidth * 0.5, window.innerHeight *0.5);
 
 				// render.style("display: none")
 				container.appendChild( renderer.domElement );
