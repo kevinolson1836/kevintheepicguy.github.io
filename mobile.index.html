@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+		
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+    </head>
+
+  <body style="  background: url('/img/bg.png') no-repeat center center fixed;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover; 
+				background-size: 100% 100%;">
+
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "../build/three.module.js"
+				}
+			}
+	</script>
+
+    <!-- <div class="face"> -->
+    <script type="module">
+				import * as THREE from 'three';
+
+				import { OBJLoader } from './jsm/loaders/OBJLoader.js';
+
+				let container;
+
+				let camera, scene, renderer;
+
+				let mouseX = 0, mouseY = 0;
+
+				let windowHalfX = window.innerWidth / 2;
+				let windowHalfY = window.innerHeight / 2;
+
+				let object;
+
+				let counter = 0;
+
+				function isMobileDevice() {
+					return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+				};
+
+				// if ( isMobileDevice() == false){
+					// loadingFunction()
+					// loadingFunction()
+					init();
+					animate();
+					// loadingFunction()
+				// }
+
+
+			function init() {
+
+				container = document.getElementById( 'faceDiv' );
+				// console.log(document.body);
+				// document.body.after( container, document.getElementById( "box3" ) );
+				// console.log(document.body)
+				camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 2000 );
+				camera.position.z = 250;
+
+				// scene
+
+				scene = new THREE.Scene();
+     	   // scene.background = new THREE.Color( 0 );
+				const ambientLight = new THREE.AmbientLight( 0xcccccc, 0.4 );
+				scene.add( ambientLight );
+
+				const pointLight = new THREE.PointLight( 0xffffff, 0.8 );
+				camera.add( pointLight );
+				scene.add( camera );
+        
+			
+				// manager
+
+				function loadModel() {
+
+					object.traverse( function ( child ) {
+
+						if ( child.isMesh ) child.material.map = texture;
+
+					} );
+
+					// object.position.y = - 95;
+					scene.add( object );
+
+				}
+
+				const manager = new THREE.LoadingManager( loadModel );
+
+				// texture
+
+				const textureLoader = new THREE.TextureLoader( manager );
+				const texture = textureLoader.load( 'models/head3d.jpg' );
+
+				// model
+
+				function onProgress( xhr ) {
+						
+					if ( xhr.lengthComputable ) {
+
+						const percentComplete = xhr.loaded / xhr.total * 100;
+						console.log( 'model ' + Math.round( percentComplete, 2 ) + '% downloaded' );
+					}
+					// loadingFunction()
+				}
+
+				function onError() {}
+
+				const loader = new OBJLoader( manager );
+				loader.load( 'models/head3d.obj', function ( obj ) {
+
+					object = obj;
+
+				}, onProgress, onError );
+
+				//
+
+				renderer = new THREE.WebGLRenderer( { alpha: true, canvas: document.getElementById( 'canvasdd' ) } );
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth * 0.5, window.innerHeight *0.5);
+
+				// render.style("display: none")
+				container.appendChild( renderer.domElement );
+
+				document.addEventListener( 'mousemove', onDocumentMouseMove );
+
+				//
+
+				window.addEventListener( 'resize', onWindowResize );
+				console.log(renderer.domElement.display = "block")
+				
+
+			}
+
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / 2;
+				windowHalfY = window.innerHeight / 2;
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function onDocumentMouseMove( event ) {
+
+				mouseX = ( event.clientX - windowHalfX ) /2;
+				mouseY = ( event.clientY - windowHalfY ) /2;
+
+			}
+
+			//
+
+			function animate() {
+				// start screen loading div 
+
+				requestAnimationFrame( animate );
+				render();
+				
+
+			}
+
+			function render() {
+
+				camera.position.x += ( -mouseX - camera.position.x ) * .05;
+				camera.position.y -= (  -mouseY + camera.position.y ) * .05;
+
+				// console.log("x:", camera.position.x, "y:", camera.position.y)
+				camera.lookAt( scene.position );
+
+				renderer.render( scene, camera );
+				// turn off screen loading here after count of 4
+				if (counter > 40){
+					// loadingFunction("off")
+				}
+				counter++;
+			}
+
+			function loadingFunction( value ) {
+					var x = document.getElementById("myDIV");
+					if (value === "off") {
+						console.log("block")
+						x.style.display = "block";
+					} else {
+						x.style.display = "none";
+						console.log("none")
+					}
+				}
+
+	</script>
+    <!-- navigation bar -->
+    <div class="topnav">
+      <a class="active" href="#" >Home</a>
+      <a href="projectsHome.html" >Projects</a>
+      <a href="aboutMe.html">About me</a>
+    </div>
+
+    <!-- header on top page -->
+    <!-- <div class="header"> -->
+
+		
+			
+			<div class="box" id="box1" style="display: inline; float: left; padding-top: 5%; padding-left: 5%;" >
+				<p style="display: inline; font-size: 86px; padding: 15px; border: 8px solid #FFB01F;	
+				border-radius: 2rem; color: #5F1CB0; background-color: #282828;">
+				Projects</p>
+			</div>
+			
+			<div id="box2" style="display: inline; float: right; padding-top: 5%; padding-right: 5%;">
+				<h2 style="display: inline; font-size: 86px;">About Me</h2>
+			</div>
+		
+			<div id="faceDiv" style="text-align: center;">
+				<canvas id="canvasdd"></canvas>
+			</div>
+
+				
+			<div id="box3" style="display: inline; float: left; line-height: 15%; padding-left: 5%">
+				<h2 style="display: inline; font-size: 86px;">box 3</h2>
+			</div>
+		
+			<div id="box4" style="display: inline; float: right; line-height: 15%; padding-right: 5%;">
+				<h2 style="display: inline; font-size: 86px;">box 4</h2>
+			</div>
+		
+		</div>
+	</div>
+	<!-- <div style="padding: 400px;"></div> -->
+  </body>
+</html>
