@@ -62,7 +62,7 @@
 				// document.body.after( container, document.getElementById( "box3" ) );
 				// console.log(document.body)
 				camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 2000 );
-				camera.position.z = 250;
+				camera.position.z = 350;
 
 				// scene
 
@@ -146,7 +146,7 @@
 				camera.aspect = window.innerWidth / window.innerHeight;
 				camera.updateProjectionMatrix();
 
-				renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.setSize( window.innerWidth * 0.5, window.innerHeight * 0.5);
 
 			}
 
@@ -209,26 +209,26 @@
 		
 			
 			<div class="box" id="box1" style="display: inline; float: left; padding-top: 5%; padding-left: 5%;" >
-				<p style="display: inline; font-size: 86px; padding: 15px; border: 8px solid #FFB01F;	
+				<p style="display: inline; font-size: 6vw;; padding: 15px; border: 8px solid #FFB01F;	
 				border-radius: 2rem; color: #5F1CB0; background-color: #282828;">
 				Projects</p>
 			</div>
 			
 			<div id="box2" style="display: inline; float: right; padding-top: 5%; padding-right: 5%;">
-				<h2 style="display: inline; font-size: 86px;">About Me</h2>
+				<h2 style="display: inline; font-size: 6vw;">About Me</h2>
 			</div>
 		
-			<div id="faceDiv" style="text-align: center;">
-				<canvas id="canvasdd"></canvas>
+			<div id="faceDiv" style="text-align: center; ">
+				<canvas id="canvasdd" style="position: fixed; top: 20%; left: 25%"></canvas>
 			</div>
 
 				
-			<div id="box3" style="display: inline; float: left; line-height: 15%; padding-left: 5%">
-				<h2 style="display: inline; font-size: 86px;">box 3</h2>
+			<div id="box3" style="display: inline; float: left; position: fixed; bottom: 5%; left: 5%;">
+				<h2 style="display: inline; font-size: 6vw;;">box 3</h2>
 			</div>
 		
-			<div id="box4" style="display: inline; float: right; line-height: 15%; padding-right: 5%;">
-				<h2 style="display: inline; font-size: 86px;">box 4</h2>
+			<div id="box4" style="display: inline; float: right; position: fixed; bottom: 5%; right: 5%;">
+				<h2 style="display: inline; font-size: 6vw;">box 4</h2>
 			</div>
 		
 		</div>

@@ -21,7 +21,7 @@
   /* background-size: auto; */
 }
 
-html{
+/* html{
   background: url("/img/bg.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -29,7 +29,7 @@ html{
   background-size: cover; 
   background-size: 100% 100%;
 
-}
+} */
 
 * {
   margin: 0;
@@ -59,7 +59,7 @@ html{
   font-size: 40px;
   text-align: center;
   background: #595959;
-  background-image: url('test.jpg');
+  /* background-image: url('/img/test.jpg'); */
   font-family: "Orbitron", sans-serif;
 }
 
@@ -88,10 +88,18 @@ html{
 .card {
    background-color: gray;
    padding: 20px;
-   margin-top: 20px;
+   font-family: myFirstFont;
+   /* margin-top: 20px; */
 }
 
+h2{
+  font-size: 4vw;
+}
 
+@font-face {
+  font-family: myFirstFont;
+  src: url('https://fonts.googleapis.com/css?family=Orbitron');
+}
 
 .ghostBox {
   width: 100%;
@@ -123,8 +131,8 @@ html{
 .footer {
   padding: 20px;
   text-align: center;
-  background: #ddd;
-  margin-top: 20px;
+  background: #595959;
+  /* margin-top: 20px; */
 }
 
 .lineBreak{
@@ -144,6 +152,7 @@ html{
 
 .spacer{
   padding: 3%;
+  background-image: url('/img/test2.jpg');
 }
 
 .topnav {
