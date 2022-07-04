@@ -1,0 +1,77 @@
+body{
+    background-color:#66D0FF;
+}
+
+.cloud {
+	width: 100%; height: 120px;
+	
+	background: #f2f9fe;
+	background: linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -webkit-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -moz-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -ms-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	background: -o-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+	
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	
+	position: relative;
+	margin: 120px auto 0px;
+    text-align: center;
+    padding-right: 8px;
+}
+
+.cloud:after, .cloud:before {
+	content: '';
+	position: absolute;
+	background: #f2f9fe;
+	z-index: -1
+}
+
+.cloud:after {
+	width: 30%; height: 100px;
+	top: -50px; left: 50px;
+	
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+}
+
+.cloud:before {
+	width: 50%; height: 180px;
+	top: -90px; right: 50px;
+	border-radius: 200px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+}
+
+  .textBox{
+    position: relative;
+    top: 32%;
+    width: 100%;
+    text-align: center;
+    /* right: 50%; */
+    font-size: 9vw;
+    z-index: 950;
+  }
+  
+  .topnav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 0px;
+    width: 33.33%;
+    text-decoration: none;
+    /* font-size: 24px; */
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: lightgray
+  }
+  
