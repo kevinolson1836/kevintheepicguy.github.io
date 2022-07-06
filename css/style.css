@@ -87,13 +87,11 @@
 
 /* Add a card effect for articles */
 .card {
-   /* background-color: #FFFAE3; */
-   /* background-image: linear-gradient(#04407E, #05518D,#05518D,#05518D,#05518D, #04407E); */
-   /* background-image: linear-gradient(#05518D, #04407E,#04407E,#04407E,#04407E,#05518D); */
    background-color: #333333;
    color: #FFB01F;
    padding: 20px;
    font-family: myFirstFont;
+   text-align: center;
    /* margin-top: 20px; */
 }
 
