@@ -55,13 +55,18 @@
 }
 
 /* Header/Blog Title */
+
+/* style="padding-top: 5%; padding-bottom: 2%;" */
 .header {
-  padding-top: 30px;
-  font-size: 40px;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  font-size: 10vw;
   text-align: center;
   background: #595959;
   /* background-image: url('/img/test.jpg'); */
   font-family: "Orbitron", sans-serif;
+  color: #FFB01F;
+  text-shadow: 0 0 10px #000000, 0 0 10px #000000;
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -85,9 +90,21 @@
   padding: 20px;
 }
 
+.mainBox{
+  display: inline;
+  font-size: 5vw;
+  padding: 15px;
+  border: 8px solid #ffb11f58;	
+  border-radius: 2rem;
+  color: #FFB01F; 
+  background-color: #282828;
+}
+
 /* Add a card effect for articles */
 .card {
    background-color: #333333;
+
+   text-shadow: 0 0 3px #000000, 0 0 5px #000000;
    color: #FFB01F;
    padding: 20px;
    font-family: myFirstFont;
@@ -179,7 +196,9 @@ h2{
 
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  /* color: #f2f2f2; */
+  text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+   color: #FFB01F;
   text-align: center;
   padding: 14px 14px;
   width: 33.33%;
@@ -188,8 +207,9 @@ h2{
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: rgba(221, 221, 221, 0.65);
+  text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+  color: #FFB01F;
 }
 
 .topnav a.active {
@@ -203,4 +223,47 @@ h2{
     width: 100%;
     padding: 0;
   }
+}
+
+.img{
+  margin-top: 10vh;
+  background-image: url('/img/kevin.png');
+  /* background-position: center; */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-color: red;
+  width: 50vw;
+  height: 65vh;
+  display: inline-block;
+}
+
+.links{
+  margin-top: 5vh;
+  /* margin-bottom: vh; */
+  text-align: center;
+  display: inline-block;
+  width: 49.5%;
+}
+
+.aboutMe{
+  /* padding-top: -100px;  */
+  display: inline-block;
+  width: 45vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin-top: -100px;
+  position: relative;
+  bottom: 14vh;
+  font-size: 3vh;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+}
+
+.aboutMeBody{
+  background-color: #282828;
+  color: #FFB01F;
+  text-shadow: 0 0 3px #000000, 0 0 5px #000000;
 }
