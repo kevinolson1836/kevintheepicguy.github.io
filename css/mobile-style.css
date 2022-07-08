@@ -66,26 +66,40 @@ body{
     z-index: 950;
   }
   
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position:fixed;
+    top:0;
+    left: 0;
+    margin-bottom: 500px;
+    width:100%;
+    z-index:100;
+  }
   .topnav a {
     float: left;
-    color: black;
+    /* color: #f2f2f2; */
+    text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+     color: #FFB01F;
     text-align: center;
-    padding: 14px 0px;
+    padding-top: 14px;
+    height: 5vh;
+    /* margin-bottom: 100px; */
     width: 33.33%;
     text-decoration: none;
     /* font-size: 24px; */
   }
   
   .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: rgba(221, 221, 221, 0.65);
+    text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+    color: #FFB01F;
   }
   
   .topnav a.active {
-    background-color: lightgray
+    background-color: gray
   }
   
-
 
   .land {
     width: 100%; height: 120px;
@@ -128,3 +142,48 @@ body{
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
   }
+
+
+.aboutMeBody{
+  background-color: #282828;
+  color: #FFB01F;
+  text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+}
+
+.topic{
+  text-align: center;
+}
+
+.subTopic{
+  text-align: center;
+  padding: 0.5vh;
+  font-size: 150%;
+}
+
+.links{
+  margin-top: 5vh;
+  /* margin-bottom: vh; */
+  text-align: center;
+  display: inline-block;
+  width: 49.5%;
+}
+
+.header {
+  position: relative;
+  top: 5vh;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  font-size: 5vw;
+  text-align: center;
+  background: #595959;
+  font-family: "Orbitron", sans-serif;
+  color: #FFB01F;
+  text-shadow: 0 0 10px #000000, 0 0 10px #000000;
+}
+
+.spacer{
+  padding-bottom: 15%;
+  /* background-image: url('/img/test2.jpg'); */
+  /* background-image: linear-gradient(#282828,#282828,#282828,#FF2600, #282828,#282828,#282828); */
+  background-color: #282828;
+}

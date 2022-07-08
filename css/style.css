@@ -58,12 +58,13 @@
 
 /* style="padding-top: 5%; padding-bottom: 2%;" */
 .header {
-  padding-top: 5%;
-  padding-bottom: 2%;
+  position: relative;
+  top: 5vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
   font-size: 10vw;
   text-align: center;
   background: #595959;
-  /* background-image: url('/img/test.jpg'); */
   font-family: "Orbitron", sans-serif;
   color: #FFB01F;
   text-shadow: 0 0 10px #000000, 0 0 10px #000000;
@@ -183,6 +184,7 @@ h2{
   position:fixed;
   top:0;
   left: 0;
+  margin-bottom: 500px;
   width:100%;
   z-index:100;
 }
@@ -200,7 +202,9 @@ h2{
   text-shadow: 0 0 3px #000000, 0 0 5px #000000;
    color: #FFB01F;
   text-align: center;
-  padding: 14px 14px;
+  padding-top: 14px;
+  height: 5vh;
+  /* margin-bottom: 100px; */
   width: 33.33%;
   text-decoration: none;
   /* font-size: 24px; */
@@ -220,7 +224,7 @@ h2{
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   
-    width: 100%;
+    width: 100%; 
     padding: 0;
   }
 }
@@ -266,4 +270,13 @@ h2{
   background-color: #282828;
   color: #FFB01F;
   text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+}
+
+.topic{
+  text-align: center;
+}
+
+.subTopic{
+  text-align: center;
+  padding: 0.5vh;
 }
