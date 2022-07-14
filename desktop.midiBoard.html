@@ -1,0 +1,149 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Project title</title>
+  </head>
+
+<body>
+
+    <div class="topnav">
+        <a href="index.html" >Home</a>
+        <a href="desktop.projectsHome.html" >Projects</a>
+        <a class="active" href="#">About me</a>
+      </div>
+
+          <!-- header on top of page -->
+    <div class="header" style="padding-bottom: 2%;">
+        <h2>Capcitive Touch MIDI Board</h2>
+      </div>
+  
+      <!-- spacer div -->
+      <!-- <div class="spacer"> -->
+        <div class="links" style="width: 100%; padding: 5vh; background-color: #282828;">
+            <h2 style="display: inline; font-size: 6vh; position: relative; bottom: 2.2vh;">Repository link:</h2>
+            <a href="https://github.com/kevintheepicguy/midi_tocuh_sensor" target="_blank">
+                <img src="/img/GitHub_Logo_and_mark.png"  width="200" height="82" >
+            </a>
+          </div>
+      <!-- </div> -->
+
+    <div class="column middle">
+
+        <p class="projectText">This project of mine that I took on was my first real attempt at incorporating my love of microcontrollers
+            and my fascination with music. My fascination started out by my roommate teaching me how to play the piano. I was having a
+            hard time understanding how the single notes came together to form chords, while struggling to learn the most basic concepts
+            of playing music, I decided the best way for me to learn how was to create my own project based around creating a
+            instrument from scratch and thus the MIDI sound board was created!
+        </p>
+        <div class="paragraphSpacer"></div>
+
+        <p class="projectText">The components I used for this project are quite simple, I used the following to complete 
+            the project:
+        </p>
+        <ul class="projectText" style="text-indent: 0%; padding-left: 10vw; padding-top: 3vh;">
+            <li>4<a target="_blank" href="https://www.amazon.com/HiLetgo-MPR121-Breakout-V12-Proximity-Keyboard-Capacitive/dp/B06XXYZPPX/ref=sr_1_13?keywords=capacitive+touch+sensor&qid=1657762265&sr=8-13">
+                Capacitive Touch Sensor’s</a></li>
+                <li>1<a target="_blank" href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/ref=sr_1_3?crid=1YPOF6G9O26E4&keywords=arduino+uno&qid=1657762424&sprefix=ardunio+uno%2Caps%2C99&sr=8-3">
+                    Ardunio UNO</a></li>
+            <li>48 Copper pipe plugs</li>
+            <li>LOTS of wire</li>
+            <li>USB to printer cable</li>
+            <li>3D printed case</li>
+            <li>Super glue</li>
+            <li>Prototyping board</li>
+            <li>Assorted tools</li>
+          </ul>
+        <div class="paragraphSpacer"></div>        
+        
+        <p class="projectText">This project is very tedious, if you are wanting to take this project on be warned, 
+            its a lot of soldering and waiting for glue to dry, plus you will need a 3D printer. I would recommend 
+            taking this project on as it was very satisfying when I completed it and got it working correctly.
+        </p>
+        <div class="paragraphSpacer"></div>
+        
+        <p class="projectText">To start things out you will first need all the components listed on the top of the 
+            page, after you have all the components I would recommend printing out the case to hold the copper plugs in place.
+            While you are waiting for the print to finish, strip about 50 strands of wire the length of your forearm. 
+        </p>
+        
+        <div class="paragraphSpacer"></div>
+        <p class="projectText">When you have completed both of the previous steps you can put all 48 copper plugs into the holes
+            in the case you have printed, take one of the stripped wires and wrap one end of it around the part of the copper plug
+            that is sticking out of the bottom the case and use super glue to glue it onto the copper plug. Normally I would 
+            say to solder it on, but copper and solder don’t like to stick to each other. I found it easiest to glue 1 row and 
+            wait an hour or two for the glue to dry a little bit then move on to the next row. This process will be long and 
+            tedious but there's more to come! 
+        </p>
+        <div class="paragraphSpacer"></div>
+        
+        <img style="width: 100%" src="/img/MIDI_board/glued.jpg">
+        <div class="paragraphSpacer"></div>
+
+        <div class="paragraphSpacer"></div>
+        <p class="projectText">After you have gotten all wires glued into place, you will want to route them all down into
+            one of the corners. When you get them all in one corner you can then move on to soldering the electronics. Before
+            you Solder the capacitive touch boards on to the Prototyping board you MUST set each sensor to have the correct
+            I2C address, I accomplished this by scraping the traces on the ADD pads and soldering the 1 of the other pads
+            together on the back of the board. Don't ask me why they have the boards designed this way, but this is the 
+            only way I found that would change the I2C address. After this is done you are ready to put it all on the 
+            prototyping boards!
+        </p>
+        <div class="paragraphSpacer"></div>
+      
+        <div class="paragraphSpacer"></div>
+        <p class="projectText">Solder pins onto the prototyping board and solder all the same pins to each other minus the
+            ADD pin ( ground to ground, 3.3V to 3.3V, etc.). Next connect the pins in the following order:
+        </p>
+        <ul class="projectText" style="text-indent: 0%; padding-left: 10vw; padding-top: 3vh;">
+            <li>Ground to a spare wire</li>
+            <li>3.3V to a spare wire</li>
+            <li>SDA to a spare wire</li>
+            <li>SCL to a spare wire</li>
+            <li>ADD to corresponding jumped connection on back of board</li>
+        </ul>
+        <div class="paragraphSpacer"></div>
+
+        <div class="paragraphSpacer"></div>
+        <p class="projectText">After that has been completed you can move on to the most tedious part of the project. You 
+            need to solder all 48 loose wires on the 3D printed case on to each input pin of the capacitive touch sensors. 
+            Make sure to solder them in the correct order or else you will have to manually change the code I wrote for the 
+            project.When you finally complete all the soldering you are almost finished! The project should look like this 
+            at this step:
+        </p>
+        <div class="paragraphSpacer"></div>
+        <img style="width: 100%" src="/img/MIDI_board/wiredup.jpg">
+        <div class="paragraphSpacer"></div>
+
+        <div class="paragraphSpacer"></div>
+        <p class="projectText">The only steps left are to plug the spare wires coming off the prototyping board into the  
+            correct pin on the Arduino, they are labeled on the Arduino so it should be straight forward. When  that is finished
+            plug the USB cable into your computer and Arduino and upload the code found on my Github to the Ardunio. The 
+            second to last step is to download this software called “The Hairless MIDI to Serial bridge” the reason you 
+            need this is because the Ardunio UNO communicates with the Serial protocol and is missing the needed hardware 
+            to send MIDI notes over USB so we use the software to do it for us. 
+        </p>
+        <div class="paragraphSpacer"></div>
+
+        <div class="paragraphSpacer"></div>
+        <p class="projectText">The final step is to install Ableton or other music software and configure it to use the 
+            output from the Hairless software. This is what the final project should look like! At this point you are
+            finished and ready to start making music.
+        </p>
+        <div class="paragraphSpacer"></div>
+
+        <img style="width: 100%" src="/img/MIDI_board/front.jpg">
+        <div class="paragraphSpacer"></div>
+
+
+    </div>
+</div>
+
+    
+
+</body>
+</html>
+
+

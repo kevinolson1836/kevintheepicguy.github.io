@@ -13,11 +13,12 @@
   z-index: 10;
 }
 /* Add a gray background color with some padding */
-.body {
+body {
   font-family: Arial;
-  padding: 60px;
+  /* padding: 60px; */
   /* background: #ffbf47; */
-  background-image: url('/img/bg.png');
+  /* background-image: url('/img/bg.png'); */
+  background-color: #333333;
   
   /* background-size: auto; */
 }
@@ -274,9 +275,57 @@ h2{
 
 .topic{
   text-align: center;
+  font-size: 3vh;
 }
 
 .subTopic{
   text-align: center;
   padding: 0.5vh;
+  font-size: 2vh;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  padding: 3vh 5vw;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.spacerText{
+  position: relative;
+  top: 13vh;
+  padding: -20%;
+  text-align: center;
+  font-size: 3vw;
+}
+
+.projectText{
+  font-size: 1.7vw;
+  color: rgb(219, 219, 219);
+  color: #FFB01F;
+  text-shadow: 0 0 3px #000, 0 0 5px #000;
+  text-indent: 5%;
+}
+
+.paragraphSpacer{
+  padding-bottom: 5%;
+  /* background-color: #282828;  */
+}
+
+.topSpacer{
+  padding-bottom: 3%;
+  /* background-color: #282828;  */
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
