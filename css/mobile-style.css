@@ -187,3 +187,49 @@ body{
   /* background-image: linear-gradient(#282828,#282828,#282828,#FF2600, #282828,#282828,#282828); */
   background-color: #282828;
 }
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  padding: 3vh 5vw;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.spacerText{
+  position: relative;
+  top: 13vh;
+  padding: -20%;
+  text-align: center;
+  font-size: 3vw;
+}
+
+.projectText{
+  font-size: 2vh;
+  color: rgb(219, 219, 219);
+  color: #FFB01F;
+  text-shadow: 0 0 3px #000, 0 0 5px #000;
+  text-indent: 5%;
+}
+
+.paragraphSpacer{
+  padding-bottom: 5%;
+  /* background-color: #282828;  */
+}
+
+.topSpacer{
+  padding-bottom: 3%;
+  /* background-color: #282828;  */
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

@@ -3,11 +3,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile-style.css">
     <title>Project title</title>
   </head>
 
-<body>
+<body style="background-color: #282828;">
 
     <div class="topnav">
         <a href="index.html" >Home</a>
@@ -22,7 +22,7 @@
   
       <!-- spacer div -->
       <!-- <div class="spacer"> -->
-        <div class="links" style="width: 100%; padding: 5vh; background-color: #282828;">
+        <div class="links" style="width: 100%; padding-top: 4vh; background-color: #282828;">
             <h2 style="display: inline; font-size: 6vh; position: relative; bottom: 2.2vh;">Repository link:</h2>
             <a href="https://github.com/kevintheepicguy/midi_tocuh_sensor" target="_blank">
                 <img src="/img/GitHub_Logo_and_mark.png"  width="200" height="82" >
@@ -58,28 +58,11 @@
           </ul>
         <div class="paragraphSpacer"></div>        
         
-        <p class="projectText">This project is very tedious, if you are wanting to take this project on be warned, 
-            its a lot of soldering and waiting for glue to dry, plus you will need a 3D printer. I would recommend 
-            taking this project on as it was very satisfying when I completed it and got it working correctly.
-        </p>
-        <div class="paragraphSpacer"></div>
-        
         <p class="projectText">To start things out you will first need all the components listed on the top of the 
             page, after you have all the components I would recommend printing out the case to hold the copper plugs in place.
             While you are waiting for the print to finish, strip about 50 strands of wire the length of your forearm. 
         </p>
         
-        <div class="paragraphSpacer"></div>
-        <p class="projectText">When you have completed both of the previous steps you can put all 48 copper plugs into the holes
-            in the case you have printed, take one of the stripped wires and wrap one end of it around the part of the copper plug
-            that is sticking out of the bottom the case and use super glue to glue it onto the copper plug. Normally I would 
-            say to solder it on, but copper and solder don’t like to stick to each other. I found it easiest to glue 1 row and 
-            wait an hour or two for the glue to dry a little bit then move on to the next row. This process will be long and 
-            tedious but there's more to come! 
-        </p>
-        <div class="paragraphSpacer"></div>
-        
-        <img style="width: 100%" src="/img/MIDI_board/glued.jpg">
         <div class="paragraphSpacer"></div>
 
         <div class="paragraphSpacer"></div>
@@ -113,26 +96,6 @@
             project.When you finally complete all the soldering you are almost finished! The project should look like this 
             at this step:
         </p>
-        <div class="paragraphSpacer"></div>
-        <img style="width: 100%" src="/img/MIDI_board/wiredup.jpg">
-        <div class="paragraphSpacer"></div>
-
-        <div class="paragraphSpacer"></div>
-        <p class="projectText">The only steps left are to plug the spare wires coming off the prototyping board into the  
-            correct pin on the Arduino, they are labeled on the Arduino so it should be straight forward. When  that is finished
-            plug the USB cable into your computer and Arduino and upload the code found on my Github to the Ardunio. The 
-            second to last step is to download this software called “The Hairless MIDI to Serial bridge” the reason you 
-            need this is because the Ardunio UNO communicates with the Serial protocol and is missing the needed hardware 
-            to send MIDI notes over USB so we use the software to do it for us. 
-        </p>
-        <div class="paragraphSpacer"></div>
-
-        <div class="paragraphSpacer"></div>
-        <p class="projectText">The final step is to install Ableton or other music software and configure it to use the 
-            output from the Hairless software. This is what the final project should look like! At this point you are
-            finished and ready to start making music.
-        </p>
-        <div class="paragraphSpacer"></div>
 
         <img style="width: 100%" src="/img/MIDI_board/front.jpg">
         <div class="paragraphSpacer"></div>
