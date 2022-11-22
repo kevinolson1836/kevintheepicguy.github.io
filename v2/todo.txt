@@ -1,0 +1,1 @@
+fix the side bar open icon location on mobile ( under the media section in sidebar.css)
