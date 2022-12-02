@@ -72,6 +72,20 @@ main {
   user-select: none;
 }
 
+
+@media (max-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+  h4{
+    font-size: small;
+  }
+  h2{
+    font-size: small;
+  }
+}
+
+
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
