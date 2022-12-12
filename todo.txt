@@ -1,2 +1,23 @@
 fix the side bar open icon location on mobile ( under the media section in sidebar.css)
 side bar  extneds past the buttom. when clicked
+
+
+cool animation ideas with links:
+    cool flowers: https://codepen.io/mdusmanansari/pen/bGYrmjY
+    circuit board: https://codepen.io/sfi0zy/pen/GREPMdL
+    cool little city: https://codepen.io/CrystalS/pen/vYNrYWx
+    a cool way to pop the cards in: https://codepen.io/ma_suwa/pen/eYdZVML
+    cool footer/ WIP page place holder: https://codepen.io/heyluiso/pen/VwaawWd
+    cute little toaster: https://codepen.io/jh3y/pen/KKVjLrx
+    solar system: https://codepen.io/cycosta/pen/OJMebrQ
+    cute dog: https://codepen.io/stivaliserna/pen/jObPyKe
+    cool effect to have going up the page: https://codepen.io/braydoncoyer/pen/NWqaBmK
+    cool idea: every now and then a cute aniaml falls/ raises thru a portal on the side
+    bouncing basket ball: https://codepen.io/jomohop/pen/XWrKaap
+    cute submarien: https://codepen.io/akhil_001/pen/gQwJPJ
+    cute candels: https://codepen.io/akhil_001/pen/mzNQoM
+    cute coffe maker: https://codepen.io/hjdesigner/pen/jvyJdX
+    light house: https://codepen.io/agathaco/pen/JaGQPr
+    has a portal effect: https://codepen.io/Olwiba/pen/VGjPXd
+    cute windmil: https://codepen.io/AshBardhan/pen/oyyazm
+    draw users attention: https://codepen.io/jeryj/pen/LzPjdJ
