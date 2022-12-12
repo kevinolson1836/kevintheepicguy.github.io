@@ -90,8 +90,9 @@
                 </a>
                 <div class="ms-auto "><button style="width: 1em; height:1.5em; width:1.5em; border: 0; background-color:  #f1f7ed;" class="closebtn" onclick="closeNav()">&#10006;</button></div>
             </div>
-              
               <ul class="list-unstyled ps-0">
+
+                <!-- side bar section 1 -->
                 <li class="mb-1">
                   <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
                     Home
@@ -104,7 +105,11 @@
                     </ul>
                   </div>
                 </li>
+                <!-- end side bar section 1 -->
 
+
+
+                <!-- side bar section 2 -->
                 <li class="mb-1">
                   <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
                     Dashboard
@@ -118,7 +123,12 @@
                     </ul>
                   </div>
                 </li>
+                <!-- end side bar section 2 -->
 
+
+
+
+                <!-- side bar section 3 -->
                 <li class="mb-1">
                     <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
                       Test
@@ -132,7 +142,12 @@
                       </ul>
                     </div>
                 </li>
+                <!-- end side bar section 3 -->
 
+
+
+
+                <!-- side bar section 4 -->
                 <li class="border-top my-3"></li>
                 <li class="mb-1">
                     <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
@@ -147,13 +162,19 @@
                       </ul>
                     </div>
                 </li>
+                <!-- end side bar section 4 -->
               </ul>
         </div>
-    </div>
+      </div>
+      <!-- ^^^^ end of side bar -->
+
+
+
+    <!-- side bar logic -->
     <div class="" style="height: 100%; background-color: #f1f7ed; margin-top: 35%;  position: fixed;" onclick="openNav()">
       <button class="openbtn btn btn-light" style="color: black;background-color: #f1f7ed;" onclick="openNav()">&#9776;</button>
     </div>
-    <!-- ^^^^ end of side bar -->
+    <!-- end side bar logic -->
 
 
 
@@ -167,84 +188,132 @@
       <div class="container p-5"></div>
       <div class="container p-4"></div>
 
-      <div class="container p-5" style="display: block;">
-          <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-md-3" >
-            <div class="col p-2">
-              <div class="card custom-card">
-                <h5 class="card-title" style="text-align: center; font-size: 3em;">Kevin Olson (change pic to me in a  suit)</h5>
-                <div class="ratio ratio-1x1 rounded-circle overflow-hidden">
-                    <img src="assets/dist/img/kevin2.png" class="card-img-top img-cover" alt="kevin">
-                </div>
+
+
+      <!-- start of self picture section-->
+      <div class="container p-5">
+        <div class="float-container">
+          <div class="col p-2">
+            <div class="card custom-card float-child" style="width: 35%; display: inline-block;" >
+              <h1 style="text-align: center; padding-top: 5%;">Kevin Olson: </h1>
+
+              <!-- start of animation  -->
+              <div class="container-animation">
+                <section class="animation">
+                  <div class="first"><div>Python Developer</div></div>
+                  <div class="second"><div>tinkerer</div></div>
+                  <div class="third"><div>maker</div></div>
+                </section>
+              </div>
+              <!-- end of animation  -->
+
+              <div class="ratio ratio-1x1 rounded-circle overflow-hidden">
+                <img src="assets/dist/img/kevin2.png" class="card-img-top img-cover" alt="kevin">
+              </div>
+
+
+              <!-- start of links -->
                 <div class="card-body">
-                    <p class="card-text" style="text-align: center;"></p>
-                    <a href="https://github.com/kevintheepicguy" target="_blank" class="btn btn-primary">GitHub</a>
-                    <a href="https://github.com/kevintheepicguy" target="_blank" class="btn btn-primary">LinkedIn</a>
-                    <a href="https://github.com/kevintheepicguy" target="_blank" class="btn btn-primary">Resume</a>
+                  <p class="card-text" style="text-align: center;"></p>
+                  <a href="https://github.com/kevintheepicguy" target="_blank" class="btn btn-primary">GitHub</a>
+                  <a href="https://github.com/kevintheepicguy" target="_blank" class="btn btn-primary">LinkedIn</a>
+                  <a href="https://github.com/kevintheepicguy" target="_blank" class="btn btn-primary">Resume</a>
                 </div>
-              </div>
+              <!-- end of links -->
             </div>
-            <div class="col" id="about-me" style="background-color: white;margin-left: 10%;width: 56%; text-align: center;"> 
-              
-              <div class="card custom-card">
-                <h5 class="card-title" style="text-align: center; font-size: 3em;">About me (change font, BGcolor and size)</h5>
-                <div class="card-body">
-                </div>
-                
-                <div style="display: inline-block; padding-top: 5%;">
-                  <h2>
-                    <div class="vr"></div>
-                    About me (change font, BGcolor and size)
-                    <div class="vr"></div>
-                  </h2>
-                </div>
-                
-                <hr>
-                <h4> 
-                  I am a recent college graduate from Illinois State University with a degree in Information systems and a 
-                  focus in system design.
-                </h4>
-                <br>  
-                <h4>
-                  I am looking to levarage my new Information Sysytems degree to further my software engineer career. 
-                  I have strong skills in Python, C, HTML & microcontrollers. I also have very strong skills within Lunix enviroments.
-                </h4>
-                <br>
-                <h4>
-                  I have built countless side projects ranging from game controllers all the way to automation scripts.
-                  I utilized my abilitys in programing, microcontrollers, 3D modeling & Lunix to achieve all this. To view
-                  my most recent work head to my GitHub!
-                </h4>
-                <br>
-                <h4>
-                  I Have a strong passion for anything that involves new emerging technologies and automation of any task. 
-                  I love to learn and keep my self up to date.
-                </h4>
-                <br>
-                <h4>
-                  I spend my free time with friends & family. When I am not doing this I am almost always spending my time
-                  learning something I have never done before, its heavily technology based but I do branch out into any STEM field!
-                </h4>
-              </div>
-              
-              </div>
+            <!-- end of self picture section-->
+
+
+            <!-- start of cool animation-->
+            <div class="float-child" style="padding-left: 20%;">
+              <h1 style="display: inline; width: 40%;">some sort of cool animation here. (resume, some cool random drawing algo with p5.js)</h1>
             </div>
+            <!-- end of cool animation-->
           </div>
         </div>
       </div>
-      <!-- ^^^^^ end of card section -->
-  <!-- </main> -->
+      <!-- end of first main section -->
 
 
 
+      
+  <!-- start of second main section -->
 
-  <!-- horizontal line divider -->
-  <hr style="height: 2px; margin-top: 5%; margin-left: 5%; width: 90%; color:black; background-color:black; border-color: black;">
+      <!-- start of first animation secotion -->
+      <div class="float-container-about-me">
+        <div class="float-child">
+          <h1 style="display: inline; width: 40%;">some sort of cool animation here. (resume, some cool random drawing algo with p5.js)</h1>
+        </div>
+      <!-- end of first animation secotion -->
 
 
+        <!-- start of the about me section -->
+        <div class="float-child">
+          <div class="col" id="about-me" style="width: 100%; float: right; padding-right: 10%;"> 
+            <div class="card custom-card" style="padding: 7% 0% 7% 0%">
+              <h5 class="card-title" style="text-align: center; font-size: 3em;">About me (change font, BGcolor and size)</h5>
+              <div class="card-body"></div>
+                <hr>
+                <div style="width: 90%; padding-left: 10%;">
+                    <div class="slide-left-1">
+                      <h4> 
+                        I am a recent college graduate from Illinois State University with a degree in Information systems and a 
+                        focus in system design.
+                      </h4>
+                      <br>
+                    </div>  
+                    
+                    <div class="slide-left-2">
+                      <h4>
+                        I am looking to levarage my new Information Sysytems degree to further my software engineer career. 
+                        I have strong skills in Python, C, HTML & microcontrollers. I also have very strong skills within Lunix enviroments.
+                      </h4>
+                      <br>
+                    </div>
+                    <div class="slide-left-3">
+                      <h4>
+                        I often utilize my skills in programming, microcontrollers, 3D modeling, and 
+                        Linux in my free time to complete side projects. I am eager to learn about how to implement different 
+                        automation techniques to develop an efficient work flow for the end user. Check out my most recent work on 
+                        <a href="https://github.com/kevintheepicguy">Github! </a>
+                      </h4>
+                      <br>
+                    </div>
+                    <div class="slide-left-4">
+                      <h4>
+                        I have a strong passion for anything that involves recent advancements and automation of any task. 
+                        I am always looking to expand upon my skills and find ways to implement emerging technologies into my work. 
+                      </h4>
+                      <br>
+                    </div>
+                    <div class="slide-left-5">
+                      <h4>
+                        I strive to always do the best work so I can add onto my existing understanding of computer science. 
+                        I have a practical approach to problem solving: there’s always a solution to any roadblock, sometimes 
+                        you just haven’t found it yet! 
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <!-- end of the about me section -->
+      </div>
+    </div>
+    <!-- ^^^closes main^^^ -->
+
+      
+      
+      
+      
+      <!-- horizontal line divider -->
+      <hr style="height: 2px; margin-top: 5%; margin-left: 5%; width: 90%; color:black; background-color:black; border-color: black;">
+      
+      
 
 
   <!-- start of album section -->
-  <body style="height: 1000%;">
+  <body>
 
     <!-- start of section header -->
     <section class="py-5 text-center container">
