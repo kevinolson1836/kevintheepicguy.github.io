@@ -130,7 +130,7 @@
 }
 
 .animation {
-  height:100px;
+  height: 5rem;
   overflow:hidden;
   margin-left: 1rem;
 }
@@ -197,14 +197,16 @@
 }  
 
 
-
-.ocean { 
-  height: 5%;
-  width:100%;
-  /* position:absolute; */
-  bottom:0;
-  left:0;
-  background: black;
+/* waves */
+.ocean {
+  height: 80px; /* change the height of the waves here */
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
   z-index: -1;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -214,62 +216,29 @@
 }
 
 .wave {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23003F7C'/%3E%3C/svg%3E");
   position: absolute;
-  top: -158px;
-  width: 6400px;
-  height: 198px;
-  animation: wave 300s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  width: 200%;
+  height: 100%;
+  animation: wave 30s -3s linear infinite;
   transform: translate3d(0, 0, 0);
+  opacity: 0.8;
 }
 
 .wave:nth-of-type(2) {
-  top: -145px;
-  animation: wave 30s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
-  opacity: 1;
+  bottom: 0;
+  animation: wave 26s linear reverse infinite;
+  opacity: 0.5;
 }
 
-
-
-.wave2 {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
-  position: absolute;
-  top: -158px;
-  width: 6400px;
-  height: 198px;
-  animation: wave 100s cubic-bezier( 0.63, 0.45, 0.63, 0.29) infinite;
-  transform: translate3d(0, 0, 0);
+.wave:nth-of-type(3) {
+  bottom: 0;
+  animation: wave 20s -1s linear infinite;
+  opacity: 0.5;
 }
-
-
 
 @keyframes wave {
-  0% {
-    margin-left: 0;
-  }
-  100% {
-    margin-left: -100%;
-  }
-}
-
-
-
-@keyframes wave2 {
-  0% {
-    margin-left: 50%;
-  }
-  100% {
-    margin-left: -100%;
-  }
-}
-
-
-
-@keyframes swell {
-  0%, 100% {
-    transform: translate3d(0,-10px,0);
-  }
-  50% {
-    transform: translate3d(0,5px,0);
-  }
+    0% {transform: translateX(0);}
+    50% {transform: translateX(-25%);}
+    100% {transform: translateX(-50%);}
 }
