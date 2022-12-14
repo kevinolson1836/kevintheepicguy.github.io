@@ -14,6 +14,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     
+  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/dist/js/custom.js"></script>
+
+  <script src="sidebars.js"></script>
+
+    
     <!-- Custom styles for this template -->
     <link href="sidebars.css" rel="stylesheet">
   </head>
@@ -88,8 +94,6 @@
   </symbol>
   </svg>
 
-  <!-- <main style='background-image: url("assets/dist/img/background.svg"); background-size: cover; background-repeat: no-repeat; background-color: #f1f7ed;'> -->
-      
     <!-- start of side bar -->
     <div id="mySidebar" class="sidebar" style="background-color: #f1f7ed;">
         <div class="flex-shrink-0 p-3 " style="width: 10rem; background-color: #f1f7ed;">
@@ -195,18 +199,16 @@
     <div id="main">
       
       <!-- some silly top padding -->
-      <div class="container p-5">
-        
-      </div>
+      <div class="container p-5"></div>
       <div class="container p-4"></div>
 
 
 
       <!-- start of self picture section-->
       <div class="container p-5">
-        <div class="float-container">
-          <div class="col p-2">
-            <div class="card custom-card float-child" style="width: 35%; display: inline-block;" >
+        <div class="row">
+          <div class="col-md"  style="padding-left: 10%;">
+            <div id="link-section" class="card custom-card float-child" style="width: 65%; display: inline-block;" >
               <h1 style="text-align: center; padding-top: 5%;">Kevin Olson: </h1>
 
               <!-- start of animation  -->
@@ -234,12 +236,17 @@
               <!-- end of links -->
             </div>
             <!-- end of self picture section-->
+          </div>
 
-
+          <div class="col-md">
             <!-- start of cool animation-->
-            <div class="float-child" style="padding-left: 20%;">
-              <h1 style="display: inline; width: 40%;">some sort of cool animation here. (resume, game, some cool random drawing algo with p5.js)</h1>
-            </div>
+            <!-- resume section. deafult is closed and hiden -->
+          <div class="collapse" id="collapseExample">
+              <div style="padding-right: 100px; background-color: #f1f7ed;" onclick="shiftLeft()">
+                <embed src="assets/dist/pdf/Resume2022-8-15.pdf" style="background-color: #f1f7ed; margin-right: 10rem;" width="150%" height="650" type="application/pdf">
+              </div>
+          </div>
+
             <!-- end of cool animation-->
           </div>
         </div>
@@ -255,11 +262,6 @@
       <!-- start of first animation secotion -->
       <div class="float-container-about-me">
         <div class="float-child" style="height: 100%;">
-          
-          <!-- colaspe button for Resume -->
-          <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            Resume
-          </button> -->
 
           <!-- resume section. deafult is closed and hiden -->
           <div class="collapse" id="collapseExample">
@@ -276,11 +278,11 @@
 
 
         <!-- start of the about me section -->
-        <div class="float-child">
-          <div class="col" id="about-me" style="width: 100%; float: right; padding-right: 10%;"> 
+        <div class="container">
+          <div class="col-md" id="about-me" style="width: 100%; float: right; padding-left: 5%;"> 
             <div class="card custom-card" style="padding: 7% 0% 7% 0%">
               <h5 class="card-title" style="text-align: center; font-size: 3em;">About me <br>(change font, BGcolor and size)</h5>
-              <div class="card-body"></div>
+              <!-- <div class="card-body"></div> -->
                 <hr style="color: black; background-color: black;">
                 <div style="width: 90%; padding-left: 10%;">
                     <div class="slide-left-1">
@@ -549,9 +551,5 @@
   </body>
   <!-- end of album section -->
 
-  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/dist/js/custom.js"></script>
-
-  <script src="sidebars.js"></script>
 </body>
 </html>
