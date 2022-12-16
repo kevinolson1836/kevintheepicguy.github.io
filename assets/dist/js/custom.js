@@ -13,3 +13,4 @@ function openNav() {
   function shiftLeft() {
     document.getElementById("link-section").style.width = "30%";
   }
+  
