@@ -17,11 +17,11 @@
   <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/dist/js/custom.js"></script>
 
-  <script src="sidebars.js"></script>
+  <script src="assets/dist/js/sidebars.js"></script>
 
     
     <!-- Custom styles for this template -->
-    <link href="sidebars.css" rel="stylesheet">
+    <link href="assets/dist/css/sidebars.css" rel="stylesheet">
   </head>
 <body style="background-repeat: no-repeat; background-color: #f1f7ed; ">
   
@@ -95,89 +95,96 @@
   </svg>
 
     <!-- start of side bar -->
-    <div id="mySidebar" class="sidebar" style="background-color: #f1f7ed;">
-        <div class="flex-shrink-0 p-3 " style="width: 10rem; background-color: #f1f7ed;">
-            <div class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-                <a href="/" class="link-dark text-decoration-none">
-                    <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-                    <span class="fs-5 fw-semibold">Kevin Olson</span>
-                </a>
-                <div class="ms-auto "><button style="width: 1em; height:1.5em; width:1.5em; border: 0; background-color:  #f1f7ed;" class="closebtn" onclick="closeNav()">&#10006;</button></div>
-            </div>
-              <ul class="list-unstyled ps-0">
+    <div class="row g-5">
+      <!-- spacer -->
+      <div class="col-md-1"></div>
+      <!-- spacer -->
 
-                <!-- side bar section 1 -->
-                <li class="mb-1">
-                  <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
-                    Home
-                  </button>
-                  <div class="collapse" id="home-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                      <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
-                      <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Updates</a></li>
-                      <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Reports</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <!-- end side bar section 1 -->
+    <div class="col-md-5" style=" height: 100px;">
+      <div id="mySidebar" class="sidebar" style="background-color: #f1f7ed;">
+          <div class="flex-shrink-0 p-3 " style="width: 10rem; background-color: #f1f7ed;">
+              <div class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                  <a href="/" class="link-dark text-decoration-none">
+                      <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+                      <span class="fs-5 fw-semibold">Kevin Olson</span>
+                  </a>
+                  <div class="ms-auto "><button style="width: 1em; height:1.5em; width:1.5em; border: 0; background-color:  #f1f7ed;" class="closebtn" onclick="closeNav()">&#10006;</button></div>
+              </div>
+                <ul class="list-unstyled ps-0">
 
-
-
-                <!-- side bar section 2 -->
-                <li class="mb-1">
-                  <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                    Dashboard
-                  </button>
-                  <div class="collapse" id="dashboard-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                      <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
-                      <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Weekly</a></li>
-                      <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Monthly</a></li>
-                      <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Annually</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <!-- end side bar section 2 -->
-
-
-
-
-                <!-- side bar section 3 -->
-                <li class="mb-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-                      Test
+                  <!-- side bar section 1 -->
+                  <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+                      Home
                     </button>
-                    <div class="collapse" id="orders-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">New</a></li>
-                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Processed</a></li>
-                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Shipped</a></li>
-                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Returned</a></li>
-                      </ul>
-                    </div>
-                </li>
-                <!-- end side bar section 3 -->
-
-
-
-
-                <!-- side bar section 4 -->
-                <li class="border-top my-3"></li>
-                <li class="mb-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-                      Account
-                    </button>
-                    <div class="collapse" id="account-collapse">
+                    <div class="collapse" id="home-collapse">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                          <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">New...</a></li>
-                          <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Profile</a></li>
-                          <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Settings</a></li>
-                          <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Sign out</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Updates</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Reports</a></li>
                       </ul>
                     </div>
-                </li>
-                <!-- end side bar section 4 -->
-              </ul>
+                  </li>
+                  <!-- end side bar section 1 -->
+
+
+
+                  <!-- side bar section 2 -->
+                  <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                      Dashboard
+                    </button>
+                    <div class="collapse" id="dashboard-collapse">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Weekly</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Monthly</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Annually</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <!-- end side bar section 2 -->
+
+
+
+
+                  <!-- side bar section 3 -->
+                  <li class="mb-1">
+                      <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                        Test
+                      </button>
+                      <div class="collapse" id="orders-collapse">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                          <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">New</a></li>
+                          <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Processed</a></li>
+                          <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Shipped</a></li>
+                          <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Returned</a></li>
+                        </ul>
+                      </div>
+                  </li>
+                  <!-- end side bar section 3 -->
+
+
+
+
+                  <!-- side bar section 4 -->
+                  <li class="border-top my-3"></li>
+                  <li class="mb-1">
+                      <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                        Account
+                      </button>
+                      <div class="collapse" id="account-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">New...</a></li>
+                            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Profile</a></li>
+                            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Settings</a></li>
+                            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Sign out</a></li>
+                        </ul>
+                      </div>
+                  </li>
+                  <!-- end side bar section 4 -->
+                </ul>
+          </div>
         </div>
       </div>
       <!-- ^^^^ end of side bar -->
@@ -185,8 +192,12 @@
 
 
     <!-- side bar logic -->
-    <div class="" style="height: 100%; background-color: #f1f7ed; margin-top: 35%;  position: fixed;" onclick="openNav()">
-      <button class="openbtn btn btn-light" style="color: black;background-color: #f1f7ed; font-size: x-large;" onclick="openNav()">&#9776;</button>
+    <div class="top-left" style="height: 100%; text-align: center;" onclick="openNav()">
+      <!-- <button class="openbtn btn btn-light" style="font-size: 5rem;" onclick="openNav()">&#9776;</button> -->
+      <div style="height: 60px; width: 60px; background-color: #e8f1e1      ;"> 
+        <img src="assets/dist/img/hamburger.png" alt="" height="40px" width="40px">
+
+      </div>
     </div>
     <!-- end side bar logic -->
 
@@ -198,16 +209,10 @@
     <!-- start of card section -->
     <div id="main">
       
-      <!-- some silly top padding -->
-      <div class="container p-5"></div>
-      <div class="container p-4"></div>
-
-
-
       <!-- start of self picture section-->
       <div class="container p-5">
         <div class="row">
-          <div class="col-sm padding10" >
+          <div class="col-sm" >
             <div id="link-section" class="card custom-card float-child main-card" style="display: inline-block;" >
               <h1 style="text-align: center; padding-top: 5%;">Kevin Olson: </h1>
 
@@ -238,13 +243,14 @@
             <!-- end of self picture section-->
           </div>
 
-          <div class="col-md">
+          <div class="col-md-6">
             <!-- start of cool animation-->
             <!-- resume section. deafult is closed and hiden -->
+            
           <!-- <div>section above resume</div> -->
           <div class="collapse pop-container" id="collapseExample">
-              <div style="background-color: #f1f7ed; width: 100%; height: 100%; " class="pop-box">
-                <embed src="assets/dist/pdf/Resume2022-8-15.pdf" style="background-color: #f1f7ed;" width="100%" height="100%" type="application/pdf">
+              <div style=" width: 120%; height: 110%;  position: relative; left: -10%; top: -10%;" class="pop-box">
+                <embed src="assets/dist/pdf/Resume2022-8-15.pdf" style="background-color: #f1f7ed;" width="120%" height="110%"  type="application/pdf">
               </div>
           </div>
           <!-- <div>section below resume</div> -->
