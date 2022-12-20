@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Blog Template · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/blog/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/dist/css/blog.css" rel="stylesheet">
+  </head>
+  <body style="background-color: #F1F7ED;">
+    
+<div class="container">
+  <div class="row g-5">
+  
+  <!-- spacer -->
+  <div class="col-md-1"></div>
+  <!-- spacer -->
+  <div class="col-md-9">
+    <header class="blog-header py-3">
+      <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="col-4 pt-1">
+        </div>
+        <div class="col-4 text-center">
+          <a class="blog-header-logo text-dark" href="#">TITLE</a>
+        </div>
+        <div class="col-4 d-flex justify-content-end align-items-center">
+        </div>
+      </div>
+    </header>
+  </div>
+</div>
+
+<main class="container">
+  <div class="row g-5">
+  
+    <!-- spacer -->
+    <div class="col-md-1"></div>
+    <!-- spacer -->
+
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark" style="width: 90%; padding-left: 60%;">
+      <div class="col-md-6 px-0">
+        <h1 class="display-4 fst-italic">Favorite project here. maybe with an img also</h1>
+        <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+        <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+      </div>
+    </div>
+  </div>
+
+
+  
+  <div class="row g-5">
+
+    <!-- spacer -->
+    <div class="col-md-1"></div>
+    <!-- spacer -->
+
+    <div class="col-md-9 border border rounded-5" style="padding: 3%; border-color: #e9e9e9 ;background-color: #e3efdc;">
+        <article class="blog-post">
+          </article>
+
+        <article class="blog-post">
+
+            AIR- MOUSE
+I was browsing reddit and stumbled on a post about a story of a disabled person who was trying to play games on their computer but due to the disabilities they were unable to play the game because they could not use the normal controllers.
+
+This person story spoke to me and I knew I needed to do something about it. I used my skill set that I have previous developed to make this thing I call the “AIR-MOUSE”. The main idea is for the person using this to put on the glove and move their hand, the hand movements will directly move the mouse on the screen. All five fingers also have buttons on them that can be mapped to any key on the keyboard.
+
+During the construction of this project, I knew I wanted to work with the Arduino Nano 33 BLE. It comes with a 9 axis inertial measurement unit (IMU) which means that it includes an accelerometer, a gyroscope, and a magnetometer. Using the 3 sensors I can track the device in 3d space, using this we can update the mouses position.
+
+This also has an accompanying app in python to make this all work. The BLE 33 is supposed to be able to act as a HID (human interface device aka a mouse/keyboard) But at the time of making the glove it was still under development and was not working. So to get past this issue I made the accompanying application. This is not the ideal situation but It works when playing Minecraft. 
+
+The app connects to the BLE 33 and reads a few values. It will check if we need to move the mouse to the left, right or nothing. This is calculated on the BLE 33 itself and then will send the value over to the Python app. It also checks each button on the fingers and updates the value, The python app will then press the key associated with each finger.
+
+
+        </article>
+
+      </div>
+
+
+
+
+    <!-- start of the right side content -->
+    <div class="col-md-2">
+      <div class="position-sticky" style="top: 2rem;">
+        
+        <div class="p-4">
+          <h4 class="fst-italic">links</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="#">M</a></li>
+            <li><a href="#">F 2021</a></li>
+            <li><a href="#">J2021</a></li>
+            <li><a href="#">D 2020</a></li>
+            <li><a href="#">N 2020</a></li>
+            <li><a href="#">O2020</a></li>
+            <li><a href="#">Sr 2020</a></li>
+            <li><a href="#">A020</a></li>
+            <li><a href="#">J0</a></li>
+            <li><a href="#">J0</a></li>
+            <li><a href="#">M</a></li>
+            <li><a href="#">A20</a></li>
+          </ol>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">My personal links</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="contact.html">Contact me</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+</body>
+</html>
