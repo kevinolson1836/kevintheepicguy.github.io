@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
     
   <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/dist/js/custom.js"></script>
@@ -115,13 +116,13 @@
                   <!-- side bar section 1 -->
                   <li class="mb-1">
                     <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
-                      Home
+                      Homes
                     </button>
                     <div class="collapse" id="home-collapse">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
-                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Updates</a></li>
-                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Reports</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Story</a></li>
+                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Projects</a></li>
                       </ul>
                     </div>
                   </li>
@@ -192,7 +193,7 @@
 
 
     <!-- side bar logic -->
-    <div class="top-left" style="height: 100%; text-align: center;" onclick="openNav()">
+    <div class="top-left" style="height: 100%; width: 8%; text-align: center;" onclick="openNav()">
       <!-- <button class="openbtn btn btn-light" style="font-size: 5rem;" onclick="openNav()">&#9776;</button> -->
       <div style="height: 60px; width: 60px; background-color: #e8f1e1      ;"> 
         <img src="assets/dist/img/hamburger.png" alt="" height="40px" width="40px">
@@ -207,7 +208,7 @@
 
     
     <!-- start of card section -->
-    <div id="main">
+    <div id="main" onclick="closeNav()">
       
       <!-- start of self picture section-->
       <div class="container p-5">
@@ -219,7 +220,7 @@
               <!-- start of animation  -->
               <div class="container-animation">
                 <section class="animation">
-                  <div class="first"><div>Python Developer</div></div>
+                  <div class="first"><div>Developer</div></div>
                   <div class="second"><div>tinkerer</div></div>
                   <div class="third"><div>maker</div></div>
                 </section>
@@ -236,7 +237,7 @@
                   <p class="card-text" style="text-align: center;"></p>
                   <a href="https://github.com/kevintheepicguy" target="_blank" class="btn btn-primary">GitHub</a>
                   <a href="https://github.com/kevintheepicguy" target="_blank" class="btn btn-primary">LinkedIn</a>
-                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Resume</button>
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" onclick="closeOpenMain()">Resume</button>
                 </div>
               <!-- end of links -->
             </div>
@@ -246,7 +247,10 @@
           <div class="col-md-6">
             <!-- start of cool animation-->
             <!-- resume section. deafult is closed and hiden -->
-            
+            <div id="collapseExampleMain" style="height: 512px; width: 512px; text-align: center;">
+              <h1>Draw on me!</h1>
+              <script src="assets/dist/js/drawing.js" ></script>
+            </div>
           <!-- <div>section above resume</div> -->
           <div class="collapse pop-container" id="collapseExample">
               <div style=" width: 120%; height: 110%;  position: relative; left: -10%; top: -10%;" class="pop-box">

@@ -109,6 +109,7 @@ main {
 }
 
 
+/* happens when screen bigger than 768 px */
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
@@ -131,7 +132,7 @@ main {
     position: fixed;
     top: 50px;
     left: 0px;
-    display: block;
+    display: inline-block;
   }
 }
 
