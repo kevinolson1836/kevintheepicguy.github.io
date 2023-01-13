@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kevin</title>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind">
+
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sidebars/">
 
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -24,6 +26,19 @@
     <!-- Custom styles for this template -->
     <link href="assets/dist/css/sidebars.css" rel="stylesheet">
   </head>
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5RPZVT56L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-C5RPZVT56L');
+  </script>
+    
+
 <body style="background-repeat: no-repeat; background-color: #f1f7ed; ">
   
   <!-- start of waves  -->
@@ -115,16 +130,9 @@
 
                   <!-- side bar section 1 -->
                   <li class="mb-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
-                      Homes
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" onclick="location.href = 'index.html';">
+                     Home
                     </button>
-                    <div class="collapse" id="home-collapse">
-                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
-                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Story</a></li>
-                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Projects</a></li>
-                      </ul>
-                    </div>
                   </li>
                   <!-- end side bar section 1 -->
 
@@ -133,14 +141,20 @@
                   <!-- side bar section 2 -->
                   <li class="mb-1">
                     <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                      Dashboard
+                      Projects
                     </button>
                     <div class="collapse" id="dashboard-collapse">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
-                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Weekly</a></li>
-                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Monthly</a></li>
-                        <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Annually</a></li>
+                        <li><a href="comingSoon.html" class="link-dark d-inline-flex text-decoration-none rounded">Air-Mouse</a></li>
+                        <li><a href="comingSoon.html" class="link-dark d-inline-flex text-decoration-none rounded">Website for Client</a></li>
+                        <li><a href="comingSoon.html" class="link-dark d-inline-flex text-decoration-none rounded">Hackathon</a></li>
+                        <li><a href="comingSoon.html" class="link-dark d-inline-flex text-decoration-none rounded">Advvent of Code (2022)</a></li>
+                        <li><a href="comingSoon.html" class="link-dark d-inline-flex text-decoration-none rounded">"Mario" Remake</a></li>
+                        <li><a href="comingSoon.html" class="link-dark d-inline-flex text-decoration-none rounded">Google Calendar CLI</a></li>
+                        <li><a href="comingSoon.html" class="link-dark d-inline-flex text-decoration-none rounded">MIDI board</a></li>
+                        <li><a href="comingSoon.html" class="link-dark d-inline-flex text-decoration-none rounded">Seven Segment Clock</a></li>
+                        <li><a href="comingSoon.html" class="link-dark d-inline-flex text-decoration-none rounded">Audio Reactive Lights</a></li>
+                        <li><a href="comingSoon.html" class="link-dark d-inline-flex text-decoration-none rounded">Muscle Music</a></li>
                       </ul>
                     </div>
                   </li>
@@ -236,7 +250,7 @@
                 <div class="card-body">
                   <p class="card-text" style="text-align: center;"></p>
                   <a href="https://github.com/kevintheepicguy" target="_blank" class="btn btn-primary">GitHub</a>
-                  <a href="https://github.com/kevintheepicguy" target="_blank" class="btn btn-primary">LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/kevin-olson12/" target="_blank" class="btn btn-primary">LinkedIn</a>
                   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" onclick="closeOpenMain()">Resume</button>
                 </div>
               <!-- end of links -->
@@ -248,7 +262,7 @@
             <!-- start of cool animation-->
             <!-- resume section. deafult is closed and hiden -->
             <div id="collapseExampleMain" style="height: 512px; width: 512px; text-align: center;">
-              <h1>Draw on me!</h1>
+              <h1>Draw on me! <h5>(shape recognition comming soon)</h5></h1>
               <script src="assets/dist/js/drawing.js" ></script>
             </div>
           <!-- <div>section above resume</div> -->
@@ -294,7 +308,12 @@
         <div class="container">
           <div class="col-md" id="about-me" style="width: 100%; float: right; padding-left: 5%;"> 
             <div class="card custom-card no-padding" style="padding: 7% 0% 7% 0%">
-              <h5 class="card-title" style="text-align: center; font-size: 3em;">My story <br>(change font, BGcolor and size)</h5>
+              <h5 class="card-title" style="text-align: center; font-size: 5em;">My story</h5>
+  
+              
+              <!-- horizontal line divider -->
+              <hr style="height: 2px; margin-top: 1%; margin-left: 5%; width: 90%; color:black; background-color:black; border-color: black;">
+              
               <!-- <div class="card-body"></div> -->
                 <hr style="color: black; background-color: black;">
                 <div style="width: 90%; padding-left: 10%;">
@@ -371,7 +390,7 @@
     <!-- end of section header -->
 
     <!-- start of card section -->
-    <div class="album py-5 bg-light">
+    <div class="album py-5">
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           
@@ -379,17 +398,19 @@
 
           <!-- start of each card -->
           <div class="col">
-            <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Air-mouse</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Air-mouse</text></svg>
-              <div class="card-body">
-                <h3 class="card-text" style="text-align: center;">Air-mouse</h3>
-                <p class="card-text">I designed this with disabled people in mind, It was my goal to make a way for disabled poeople to play Minecraft.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
+            <a href="air-mouse.html">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Air-mouse</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Air-mouse</text></svg>
+                <div class="card-body">
+                  <h3 class="card-text" style="text-align: center;">Air-Mouse</h3>
+                  <p class="card-text">I designed this with disabled people in mind, It was my goal to make a way for disabled poeople to play Minecraft.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <!-- end of each card -->
 
@@ -397,17 +418,19 @@
 
           <!-- start of each card -->        
           <div class="col">
-            <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-              <div class="card-body">
-                <h3 class="card-text" style="text-align: center;">Website for client</h3>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
+            <a href="comingSoon.html">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                  <h3 class="card-text" style="text-align: center;">Website For Client</h3>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <!-- end of each card -->
 
@@ -415,6 +438,7 @@
 
           <!-- start of each card -->
           <div class="col">
+            <a href="comingSoon.html">
             <div class="card shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
               <div class="card-body">
@@ -426,6 +450,7 @@
                 </div>
               </div>
             </div>
+          </a>
           </div>
           <!-- end of each card -->
 
@@ -433,10 +458,11 @@
 
           <!-- start of each card -->
           <div class="col">
+            <a href="comingSoon.html">
             <div class="card shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
               <div class="card-body">
-                <h3 class="card-text" style="text-align: center;">Advent of code (2022)</h3>
+                <h3 class="card-text" style="text-align: center;">Advent Of Code (2022)</h3>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
@@ -444,6 +470,7 @@
                 </div>
               </div>
             </div>
+            </a>
           </div>
           <!-- end of each card -->
 
@@ -451,10 +478,11 @@
 
           <!-- start of each card -->
           <div class="col">
+            <a href="comingSoon.html">
             <div class="card shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
               <div class="card-body">
-                <h3 class="card-text" style="text-align: center;">"Mario" remake</h3>
+                <h3 class="card-text" style="text-align: center;">"Mario" Remake</h3>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
@@ -462,6 +490,7 @@
                 </div>
               </div>
             </div>
+          </a>
           </div>
           <!-- end of each card -->
 
@@ -469,10 +498,11 @@
 
           <!-- start of each card -->
           <div class="col">
+            <a href="comingSoon.html">
             <div class="card shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
               <div class="card-body">
-                <h3 class="card-text" style="text-align: center;">Google calendar CMD</h3>
+                <h3 class="card-text" style="text-align: center;">Google Calendar CLI</h3>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
@@ -480,6 +510,7 @@
                 </div>
               </div>
             </div>
+            </a>
           </div>
           <!-- end of each card -->
 
@@ -487,10 +518,11 @@
 
           <!-- start of each card -->
           <div class="col">
+            <a href="comingSoon.html">
             <div class="card shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
               <div class="card-body">
-                <h3 class="card-text" style="text-align: center;">MIDI board</h3>
+                <h3 class="card-text" style="text-align: center;">MIDI Board</h3>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
@@ -498,15 +530,17 @@
                 </div>
               </div>
             </div>
+            </a>
           </div>
           <!-- end of each card -->
 
            <!-- start of each card -->
            <div class="col">
+            <a href="comingSoon.html">
             <div class="card shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
               <div class="card-body">
-                <h3 class="card-text" style="text-align: center;">Seven segment clock</h3>
+                <h3 class="card-text" style="text-align: center;">Seven Segment Clock</h3>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
@@ -514,15 +548,17 @@
                 </div>
               </div>
             </div>
+            </a>
           </div>
           <!-- end of each card -->
 
            <!-- start of each card -->
            <div class="col">
+            <a href="comingSoon.html">
             <div class="card shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
               <div class="card-body">
-                <h3 class="card-text" style="text-align: center;">Audio reactive lights</h3>
+                <h3 class="card-text" style="text-align: center;">Audio Reactive Lights</h3>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
@@ -530,15 +566,17 @@
                 </div>
               </div>
             </div>
+            </a>
           </div>
           <!-- end of each card -->
 
            <!-- start of each card -->
            <div class="col">
+            <a href="comingSoon.html">
             <div class="card shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
               <div class="card-body">
-                <h3 class="card-text" style="text-align: center;">Muscle music</h3>
+                <h3 class="card-text" style="text-align: center;">Muscle Music</h3>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
@@ -546,6 +584,7 @@
                 </div>
               </div>
             </div>
+          </a>
           </div>
           <!-- end of each card -->
 
@@ -557,15 +596,32 @@
 
   </body>
   <!-- end of album section -->
-  <footer>
-    <div>
-      CONTACT ME
-      EMAIL:
-      GITHUB:
-      TWITER?
-      3D PRINTS
-    </div>
-  </footer>
+  
+  
+  <!-- spacer -->
+  <div class="col-md-1"></div>
+  <!-- spacer -->
+
+
+  <!-- footer -->
+  <div class="container">
+    <footer class="py-3 my-4 " style="text-align: center;">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Projects</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact</a></li>
+      </ul>
+      <ul class="nav justify-content-center pb-3 mb-3 text-muted">
+        <li class="nav-item"><a href="">Kevin Olson</a></li>
+        <li class="nav-item"><a href="mailto:kevin.olson1836@gmail.com">kevin.olson1836@gmail.com</a></li>
+        <li class="nav-item"><a href="https://github.com/kevintheepicguy">GitHub</a></li>
+        <li class="nav-item"><a href="https://www.linkedin.com/in/kevin-olson12/">LinkedIn</a></li>
+      </ul>
+      </p>
+    </footer>
+  </div>
+  
+  
 
 </body>
 </html>
