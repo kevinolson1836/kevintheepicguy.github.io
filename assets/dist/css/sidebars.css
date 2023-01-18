@@ -19,6 +19,16 @@ main {
   overflow-y: hidden;
 }
 
+.liSpacer{
+  background-color: #f1f7ed; height: 10px;
+}
+
+.liIndent{
+  padding: 400px;
+  font-size: 1px;
+  padding-bottom: 10px;
+}
+
 .img-cover{
   object-fit: cover;
   object-position: center;

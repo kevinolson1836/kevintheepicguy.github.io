@@ -22,6 +22,12 @@ function openNav() {
 
 
   /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+  function closeBlogNav() {
+    document.getElementById("mySidebar").style.width = "0";
+  }
+
+
+  /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
   function closeOpenMain() {
     if(main === "open"){
       document.getElementById("collapseExampleMain").style.display = "none";
