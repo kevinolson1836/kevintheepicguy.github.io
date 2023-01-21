@@ -11,6 +11,10 @@ html {
   height: -webkit-fill-available;
 }
 
+.center{
+ text-align: center;
+}
+
 main {
   height: 100vh;
   height: -webkit-fill-available;
