@@ -86,7 +86,7 @@
 
 
 
-
+                 
                   <!-- side bar section 2 -->
                   <li class="mb-1">
                     <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
@@ -167,10 +167,10 @@
           <!-- spacer -->
       
           <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark" style="width: 90%; padding-left: 60%;" >
-              <h1 class="display-4 fst-italic">Air-Mouse <h4><u><a href="https://github.com/kevintheepicguy/air-mouse" target="_blank">Github link</a></u></u></h4></h1>
+              <h1 class="display-4 fst-italic">Google Calendar On The Command Line<h4><u><a href="https://github.com/kevintheepicguy/google-calendar-command-line" target="_blank">Github link</a></u></u></h4></h1>
+ 
           </div>
         </div>
-      
       
         
         <div class="row g-5" style="text-align: left;">
@@ -181,55 +181,32 @@
       
           <div class="col-md-9 border border rounded-5" style="padding: 3%; border-color: #e9e9e9 ;background-color: #e3efdc;">
               
-            <!-- <h1>Write up comming soon! Meanwhile you can find the code here: <a href="https://github.com/kevintheepicguy" target="_blank">GitHub</a></h1> -->
-      
+            <!-- put write up in here -->
             <p>
-              While browsing Reddit, I came across a story about a disabled individual who was unable to play games on their 
-              computer due to their inability to use traditional controllers. The story resonated with me, and I felt 
-              compelled to do something about it. Using my previous experience and skill set, I developed a device I call
-              the "Air-Mouse." This device allows the user to control their computer cursor simply by moving their hand, 
-              as well as map keyboard inputs to buttons on each finger of the glove.
+                I recently completed a project that was both enjoyable and educational. At the time
+                Ubuntu 20.04 was my primary operating system, so I was spending a lot of time in
+                the command line. At the time, I relied heavily on my Google Calendar to manage my 
+                schedule, and as a programmer, I saw an opportunity to streamline the process of
+                accessing my calendar. After thoroughly reviewing the Google Calendar API for Python, 
+                I started developing a solution that reduced the number of clicks and saved me a
+                significant amount of time. Initially, my solution only worked on one specific terminal
+                screen size. However, after re-evaluating my code, I made modifications to ensure the
+                solution was dynamic and compatible with all screen sizes. Through testing, I confirmed that
+                the solution was indeed compatible with all screen sizes. This project was a valuable learning
+                experience and enhanced my understanding of APIs. As a result, I am now more confident in
+                utilizing APIs for future projects.
             </p>
-      
-            <p>
-              I used the Arduino Nano 33 BLE for this project, as it comes equipped with a 9-axis 
-              inertial measurement unit (IMU) that includes an accelerometer, gyroscope, and magnetometer. These sensors 
-              allow me to track the device in 3D space, and therefore, accurately control the cursor's movement. Additionally,
-              I created a Python application that connects to the BLE 33, allowing for the host machine to get the sensor data
-              to properly handle the inputs.
-            </p>
-      
-            <p>
-              The BLE 33 was designed to act as a Human Interface Device (HID), such as a mouse or keyboard, 
-              but at the time of development, it was lacking the abilitys i needed and there for was not fully functional. To overcome 
-              this issue, I created the accompanying application. Although not the ideal solution, the Air-Mouse 
-              works effectively as a proof of concept to show playing games such as Minecraft is possible. The application listens for updates from the BLE 33, 
-              when a new value is read, using the values we can translate that into cursor movement and keyboard presses.
-            </p>
-      
-      
-            <p>
-              This project was just a prototype and proof of concept. There are many ways to improve upon it, such as 
-              using conductive thread to hide the wires, implementing easier to click buttons, or finding another way to 
-              sense the finger movements to activate key presses. If I were to go back to the projecy I would foucs on 
-              fixing the code to make it more robust and user-friendly.
-            </p>
-      
-            <p>
-              I learned a great deal from this project. It was my first time making a wearable 
-              device, and I now understand the importance of flexibility to accommodate for human movement. I also gained
-              more knowledge in Bluetooth technology and problem-solving due to the lack of software for the Arduino BLE
-              33. All of these experiences will be extremely valuable in my future projects.
-            </p>
-      
-            <br>
-            <br>
-            <br>
-            <br>
-            <img src="assets/dist/img/airMouse.jpg" alt="air-mouse.jpg" style="width: 100%">
             
-      
-            <!-- NOTE: all text writen by me, Kevin Olson. edditing help from ChatGPT -->
+            <p>
+                A year after completing the initial project, I revisited it and I am in the process of further improvements. 
+            </p>
+                    
+            <br><br><br><br><br>
+            
+            <p>Below is an image of what the program looks like, I removed some of the personal data from some of the calendars.</p>
+            <br><br><br>
+            <img src="assets/dist/img/googleCal.PNG" alt="" width="100%">
+
             </div>
       
       
