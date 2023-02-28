@@ -250,3 +250,16 @@
 .liSpacer{
   background-color: #e8f1e1;
 }
+
+.drawingSection{
+  height: 512px; width: 512px; text-align: center;
+}
+
+@media only screen and (max-width: 600px){
+  .drawingSection{
+    display: none;/* drawing does not work on mobile working on a fix */ 
+    height: 212px; width: 212px; text-align: center;
+    overscroll-behavior: contain;
+  }
+  
+}

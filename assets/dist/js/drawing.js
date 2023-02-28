@@ -8,10 +8,18 @@ let parentDiv = "collapseExampleMain";
 
 function setup() {
 
-  
-  var myCanvas = createCanvas(512,512);
-  myCanvas.parent(parentDiv);
-  background(200);
+  var width = screen.width  
+
+  if(width > 600){
+    var myCanvas = createCanvas(512,512);
+    myCanvas.parent(parentDiv);
+    background(200);
+  } else{
+    vas(212,212);
+    myCanvas.parent(parentDiv);
+    background(200);
+  }
+
 
   // clear screeen
   clearbtn = createButton('Clear');
