@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kevin</title>
+    <title>Seven Segment Clock</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind">
 
@@ -65,20 +65,20 @@
     <!-- spacer -->
 
     <div class="col-md-5" style=" height: 100px;">
-      <div id="mySidebar" class="sidebar" style="background-color: #f1f7ed;">
-        <div class="flex-shrink-0 p-3 " style="width: 10rem; background-color: #f1f7ed;">
+      <div id="mySidebar" class="sidebar" style="background-color: #e8f1e1;">
+        <div class="flex-shrink-0 p-3 " style="width: 10rem; background-color: #e8f1e1;">
               <div class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
                 <a href="/" class="link-dark text-decoration-none" style="text-align: center; width: 100%;">
                     <img src="assets/dist/img/logo.png" alt="" style="height: 47px; width: 47px; transform: scale(4); margin-top: -70px"></img>
                       <!-- <p class="fs-5 fw-semibold" style="width: 100%;">Kevin Olson</p> -->
                   </a>
-                  <div class="ms-auto "><button style="width: 1em; height:1.5em; width:1.5em; border: 0; background-color:  #f1f7ed;" class="closebtn" onclick="closeBlogNav()">&#10006;</button></div>
+                  <div class="ms-auto "><button style="width: 1em; height:1.5em; width:1.5em; border: 0;background-color: #e8f1e1;" class="closebtn" onclick="closeNav()">&#10006;</button></div>
               </div>
-                <ul class="list-unstyled ps-0">
+                <ul class="list-unstyled ps-0" style="background-color: #e8f1e1;">
 
                   <!-- side bar section 1 -->
                   <li class="mb-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" onclick="location.href = 'index.html';">
+                    <button class="btn d-inline-flex align-items-center rounded border-0 collapsed" location.href="index.html">
                      Home
                     </button>
                   </li>
@@ -86,32 +86,31 @@
 
 
 
-                  
                   <!-- side bar section 2 -->
                   <li class="mb-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                    <button class="btn  d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
                       Projects
                     </button>
-                    <div class="collapse" id="dashboard-collapse">
+                    <div class="collapse" id="dashboard-collapse" style="width: 200%">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" style="font-size: small; padding-bottom: 10px; ">
                         <li class="liSpacer"> </li>
-                        <li><a href="air-mouse.html" class="link-dark d-inline-flex text-decoration-none rounded liIndent" style="font-size: large; margin: 0px 0px 10px 30px;">&#9679;Air-Mouse</a></li>
+                        <li><a href="air-mouse.html" class="link-dark d-inline-flex text-decoration-none rounded liIndent" style="font-size: medium; margin: 0px 0px 10px 30px;">&#9679;Air-Mouse</a></li>
                         <li class="liSpacer"> </li>
-                        <li><a href="clientwebsite.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: large; margin: 0px 0px 10px 30px;">&#9679;Website for Client</a></li>
+                        <li><a href="clientwebsite.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: medium; margin: 0px 0px 10px 30px;">&#9679;Website for Client</a></li>
                         <li class="liSpacer"> </li>
-                        <li><a href="hackathon.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: large; margin: 0px 0px 10px 30px;"">&#9679;Hackathon</a></li>
+                        <li><a href="hackathon.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: medium; margin: 0px 0px 10px 30px;"">&#9679;Hackathon</a></li>
                         <li class="liSpacer"> </li>
-                        <li><a href="mario.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: large; margin: 0px 0px 10px 30px;"">&#9679;"Mario" Remake</a></li>
+                        <li><a href="mario.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: medium; margin: 0px 0px 10px 30px;"">&#9679;"Mario" Remake</a></li>
                         <li class="liSpacer"> </li>
-                        <li><a href="commandLineCal.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: large; margin: 0px 0px 10px 30px;"">&#9679;Google Calendar CLI</a></li>
+                        <li><a href="commandLineCal.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: medium; margin: 0px 0px 10px 30px;"">&#9679;Google Calendar CLI</a></li>
                         <li class="liSpacer"> </li>
-                        <li><a href="midiBoard.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: large; margin: 0px 0px 10px 30px;"">&#9679;MIDI board</a></li>
+                        <li><a href="midiBoard.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: medium; margin: 0px 0px 10px 30px;"">&#9679;MIDI board</a></li>
                         <li class="liSpacer"> </li>
-                        <li><a href="sevensegmentclock.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: large; margin: 0px 0px 10px 30px;"">&#9679;Seven Segment Clock</a></li>
+                        <li><a href="sevensegmentclock.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: medium; margin: 0px 0px 10px 30px;"">&#9679;Seven Segment Clock</a></li>
                         <li class="liSpacer"> </li>
-                        <li><a href="audioreactivelights.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: large; margin: 0px 0px 10px 30px;"">&#9679;Audio Reactive Lights</a></li>
+                        <li><a href="audioreactivelights.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: medium; margin: 0px 0px 10px 30px;"">&#9679;Audio Reactive Lights</a></li>
                         <li class="liSpacer"> </li>
-                        <li><a href="musclemusic.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: large; margin: 0px 0px 10px 30px;"">&#9679;Muscle Music</a></li>
+                        <li><a href="musclemusic.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: medium; margin: 0px 0px 10px 30px;"">&#9679;Muscle Music</a></li>
                       </ul>
                     </div>
                   </li>
@@ -167,7 +166,7 @@
           <!-- spacer -->
       
           <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark" style="width: 90%; padding-left: 60%;" >
-              <h1 class="display-4 fst-italic">Comming soon! <h4><u><a href="https://github.com/kevintheepicguy/"target="_blank">Github link</a></u></u></h4></h1>
+              <h1 class="display-4 fst-italic">Seven Segment Clock <h4><u><a href="https://github.com/kevintheepicguy/seven-segment-clock" target="_blank">Github link</a></u></u></h4></h1>
  
           </div>
         </div>
@@ -182,8 +181,40 @@
           <div class="col-md-9 border border rounded-5" style="padding: 3%; border-color: #e9e9e9 ;background-color: #e3efdc;">
               
             <!-- put write up in here -->
-            <h1> this project write up is coming soon. you can veiw the code here: <a href="https://github.com/kevintheepicguy" target="_blank"><u>GitHub</u></a></h1>
+            <p>
+              During the COVID-19 pandemic, I undertook the development of a project that allowed me to enhance my skill set. 
+              At the time, I was enrolled in classes that were transitioning to an online format, leaving me with a 
+              significant amount of free time. With lots of free time I wanted to improve my skill set, so while browsing 
+              reddit I found my inspiration for my next project! It stemmed from a piston clock I saw. This piqued my 
+              interest, I wanted to make a clock with real-world physical movement.
+            </p>
+            <br><br>
         
+            <p>
+              As a college student, I was operating on a tight budget and used economical materials such as cheap servos, 
+              3D printing, and inexpensive wood. I found and 3D printed parts that would attach and move with the servos, 
+              incorporating white plastic for the front and black for the rest to blend with the background. Additionally, 
+              I collaborated with my father to construct the housing for the clock.
+            </p>
+            <br><br>
+
+            <p>
+              In retrospect, I acknowledge that the programming of the clock was less than optimal as I had not yet 
+              familiarized myself with object-oriented programming and the advantages of utilizing a class. Should I 
+              have the opportunity, I would revisit and restructure the entire code to make it more readable and maintainable.
+            </p>
+            <br><br>
+
+            <p>This hands-on project was a big source of enjoyment that allowed me to utilize many different skills 
+              and combine them into one final product. The culmination of these skills was a source of great pride for 
+              me, as I witnessed the project come to fruition.
+            </p>
+
+            <br><br><br><br><br>
+            <p>Below is a time lapse of the clock working.</p>
+            <br>
+            <video controls src="assets/dist/video/sevensegment.MP4" type="video/MP4"></video>
+
             </div>
       
       
@@ -227,7 +258,7 @@
 
 
   <!-- footer -->
-  <div class="container">
+  <div class="container" style="height: 20%;">
     <footer class="py-3 my-4 " style="text-align: center;">
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
         <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>

@@ -65,20 +65,20 @@
     <!-- spacer -->
 
     <div class="col-md-5" style=" height: 100px;">
-      <div id="mySidebar" class="sidebar" style="background-color: #f1f7ed;">
-        <div class="flex-shrink-0 p-3 " style="width: 10rem; background-color: #f1f7ed;">
+      <div id="mySidebar" class="sidebar" style="background-color: #e8f1e1;">
+        <div class="flex-shrink-0 p-3 " style="width: 10rem; background-color: #e8f1e1;">
               <div class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
                 <a href="/" class="link-dark text-decoration-none" style="text-align: center; width: 100%;">
                     <img src="assets/dist/img/logo.png" alt="" style="height: 47px; width: 47px; transform: scale(4); margin-top: -70px"></img>
                       <!-- <p class="fs-5 fw-semibold" style="width: 100%;">Kevin Olson</p> -->
                   </a>
-                  <div class="ms-auto "><button style="width: 1em; height:1.5em; width:1.5em; border: 0; background-color:  #f1f7ed;" class="closebtn" onclick="closeBlogNav()">&#10006;</button></div>
+                  <div class="ms-auto "><button style="width: 1em; height:1.5em; width:1.5em; border: 0;background-color: #e8f1e1;" class="closebtn" onclick="closeNav()">&#10006;</button></div>
               </div>
-                <ul class="list-unstyled ps-0">
+                <ul class="list-unstyled ps-0" style="background-color: #e8f1e1;">
 
                   <!-- side bar section 1 -->
                   <li class="mb-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" onclick="location.href = 'index.html';">
+                    <button class="btn d-inline-flex align-items-center rounded border-0 collapsed" location.href="index.html">
                      Home
                     </button>
                   </li>
@@ -86,32 +86,31 @@
 
 
 
-                 
                   <!-- side bar section 2 -->
                   <li class="mb-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                    <button class="btn  d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
                       Projects
                     </button>
-                    <div class="collapse" id="dashboard-collapse">
+                    <div class="collapse" id="dashboard-collapse" style="width: 200%">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" style="font-size: small; padding-bottom: 10px; ">
                         <li class="liSpacer"> </li>
-                        <li><a href="air-mouse.html" class="link-dark d-inline-flex text-decoration-none rounded liIndent" style="font-size: large; margin: 0px 0px 10px 30px;">&#9679;Air-Mouse</a></li>
+                        <li><a href="air-mouse.html" class="link-dark d-inline-flex text-decoration-none rounded liIndent" style="font-size: medium; margin: 0px 0px 10px 30px;">&#9679;Air-Mouse</a></li>
                         <li class="liSpacer"> </li>
-                        <li><a href="clientwebsite.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: large; margin: 0px 0px 10px 30px;">&#9679;Website for Client</a></li>
+                        <li><a href="clientwebsite.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: medium; margin: 0px 0px 10px 30px;">&#9679;Website for Client</a></li>
                         <li class="liSpacer"> </li>
-                        <li><a href="hackathon.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: large; margin: 0px 0px 10px 30px;"">&#9679;Hackathon</a></li>
+                        <li><a href="hackathon.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: medium; margin: 0px 0px 10px 30px;"">&#9679;Hackathon</a></li>
                         <li class="liSpacer"> </li>
-                        <li><a href="mario.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: large; margin: 0px 0px 10px 30px;"">&#9679;"Mario" Remake</a></li>
+                        <li><a href="mario.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: medium; margin: 0px 0px 10px 30px;"">&#9679;"Mario" Remake</a></li>
                         <li class="liSpacer"> </li>
-                        <li><a href="commandLineCal.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: large; margin: 0px 0px 10px 30px;"">&#9679;Google Calendar CLI</a></li>
+                        <li><a href="commandLineCal.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: medium; margin: 0px 0px 10px 30px;"">&#9679;Google Calendar CLI</a></li>
                         <li class="liSpacer"> </li>
-                        <li><a href="midiBoard.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: large; margin: 0px 0px 10px 30px;"">&#9679;MIDI board</a></li>
+                        <li><a href="midiBoard.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: medium; margin: 0px 0px 10px 30px;"">&#9679;MIDI board</a></li>
                         <li class="liSpacer"> </li>
-                        <li><a href="sevensegmentclock.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: large; margin: 0px 0px 10px 30px;"">&#9679;Seven Segment Clock</a></li>
+                        <li><a href="sevensegmentclock.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: medium; margin: 0px 0px 10px 30px;"">&#9679;Seven Segment Clock</a></li>
                         <li class="liSpacer"> </li>
-                        <li><a href="audioreactivelights.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: large; margin: 0px 0px 10px 30px;"">&#9679;Audio Reactive Lights</a></li>
+                        <li><a href="audioreactivelights.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: medium; margin: 0px 0px 10px 30px;"">&#9679;Audio Reactive Lights</a></li>
                         <li class="liSpacer"> </li>
-                        <li><a href="musclemusic.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: large; margin: 0px 0px 10px 30px;"">&#9679;Muscle Music</a></li>
+                        <li><a href="musclemusic.html" class="liIndent link-dark d-inline-flex text-decoration-none rounded" style="font-size: medium; margin: 0px 0px 10px 30px;"">&#9679;Muscle Music</a></li>
                       </ul>
                     </div>
                   </li>
@@ -250,7 +249,7 @@
 
 
   <!-- footer -->
-  <div class="container">
+  <div class="container" style="height: 20%;">
     <footer class="py-3 my-4 " style="text-align: center;">
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
         <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
