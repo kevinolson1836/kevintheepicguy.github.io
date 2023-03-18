@@ -17,6 +17,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-waypoints@2.0.5/waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js" integrity="sha512-771ZvVCYr4EfUGXr63AcX7thw7EKa6QE1fhxi8JG7mPacB/arC0cyvYPXKUkCrX2sYKnnFCZby3ZZik42jOuSQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
     
   <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
@@ -152,8 +156,8 @@
               <div class="container-animation">
                 <section class="animation">
                   <div class="first"><div>Developer</div></div>
-                  <div class="second"><div>tinkerer</div></div>
-                  <div class="third"><div>maker</div></div>
+                  <div class="second"><div>Tinkerer</div></div>
+                  <div class="third"><div>Maker</div></div>
                 </section>
               </div>
               <!-- end of animation  -->
@@ -246,47 +250,105 @@
                     
                     <div class="slide-left-2">
                       <h4>
-                        I have spent most of my free time developing projects for fun on the side. Some of my 
-                        proudest projects are the 2d platformer I made with help from my friends, 
-                        my website(that you are currently on!), and my AirMouse Project. They are listed
-                        below if you want more detail on the projects ive made.These are my favorite projects I've 
-                        made, and I am very proud of all of them. I have developed so many new skills 
-                        about Software development from my side projects that can only be made from going beyond what was needed.
+                        I have spent most of my free time developing projects for fun 
+                        and to expand my knowledge. Some of the projects I am most proud 
+                        of are the 2D Platformer I made in collaboration with my friends, 
+                        my website (that you are currently on!), and my AirMouse Project. 
+                        A full write-up on each project is listed below if you want more 
+                        detail. I have independently developed numerous new skills about 
+                        software development through my initiative and going beyond what was needed.
                       </h4>
                       <br>
                     </div>
+                    
                     <div class="slide-left-3">
                       <h4>
-                        Development is not the only hobby that I have spent many hours on, I have 
-                        also been administering my own home Linux server, configuring many services 
-                        such as a file server, HomeAssistant, VPN, and many more. I initially had 
-                        zero experience with Linux and over the past two years I have improved my 
-                        skills vastly and I am now very confident in my ability to navigate any Linux system.
-                        I have also been working with Windows Server 2019 to boost my experience with new systems.
+                        Development is not the only hobby that I have tinkered with. 
+                        In addition to administering my own home Linux server, I have 
+                        experience configuring other services such as a file server, 
+                        HomeAssistant, VPN, and more. I have also been working with 
+                        Windows Server 2019 to boost my experience with new systems. 
+                        I initially had zero experience with Linux, but over the past 
+                        two years I have put in the hard work and have gotten the hands-on
+                        experience to vastly improve my skills. I am now very confident in 
+                        my ability to adapt to, and navigate, any Linux system.
                       </h4>
                       <br>
                     </div>
+                   
                     <div class="slide-left-4">
                       <h4>
-                        I have completed an Internship at Advocate Aroura Healthcare. My roles were 
-                        primarily in a project manager type of role, I would participate in meetings 
-                        o plan out future system upgrades and I managed the structure of the file 
-                        storage system. I also provided remote and in-person technical support for 
-                        the newly installed hardware/software. I also have been working at Costco 
-                        Wholesale from 2018 to 2023. During this time I excelled in customer 
-                        service and proper communication with customers and management.                      
+                        During the summer of 2022, I completed an Internship at Advocate Aurora 
+                        Healthcare, a hospital system with 26 hospitals. As a project manager, 
+                        I participated in meeting, planned out future system upgrades, and I 
+                        managed the structure of the file storage system. I also provided remote 
+                        and in-person technical support for the newly installed hardware/software. 
+                        During my time in college, I worked at Costco Wholesale. During this time, 
+                        my reviews stated that I excelled in customer service and demonstrated 
+                        effective communication with both customers and management. I was 
+                        described as a hard worker with good time management skills.                   
                       </h4>
                       <br>
                     </div>
+                   
+                    <div class="slide-left-4">
+                      <h4>
+                        In the future I plan to be an effective softward developer 
+                        -- always learning, adapting to, and mastering emerging technologies.
+                         <!--talk about perceveince and sticking with something. I dont get fustrated and see it thru till completion. I have a lot of inititive and tinkering with things my self  -->
+                      </h4>
+                      <br>
+                    </div>
+
                   </div>
                 </div>
               </div>
         </div>
 
+
+
+      <script>
+        var shouldFadeIn = 0;
+
+        function checkIfVis(element){
+          // if box is visable and have only triggered once 
+          if ($('#boxxxxx').visible( true ) && shouldFadeIn == 0){
+              console.log("is vis");
+              shouldFadeIn = 1;
+              clearTimeout(checkIfVis );
+
+              // slide the element in (in mili seconds)
+              $("#boxxxxx").animate({marginLeft: "20%"}, 3000);
+              // document.getElementById("boxxxxx").style.paddingLeft = "100px";
+
+          }
+          setTimeout(checkIfVis, 500);
+        }
+
+        // animation = setInterval(frame, 5);
+
+        // function frame() {
+        //   if (/* test for finished */) {
+        //     clearInterval(id);
+        //   } else {
+        //     /* code to change the element style */ 
+        //   }
+        // }
+
+        $(document).ready(function(){
+          checkIfVis()
+        });
+        
+      </script>
+
+
+
+
+
         <!-- start of skills/ classes -->
         <!-- <div class="skills">
-        <div>
-          <h1>hi, make this slide in?</h1>
+        <div >
+          <h1 id="boxxxxx">hi, make this slide in?</h1>
         </div>
 
         </div> -->
