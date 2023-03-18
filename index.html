@@ -59,6 +59,7 @@
     <div class="col-md-1"></div>
     <!-- spacer -->
 
+    <!-- start of side bar -->
     <div class="col-md-5" style=" height: 100px;">
       <div id="mySidebar" class="sidebar" style="background-color: #e8f1e1;">
         <div class="flex-shrink-0 p-3 " style="width: 10rem; background-color: #e8f1e1;">
@@ -158,13 +159,12 @@
               <!-- end of animation  -->
 
               <div class="ratio ratio-1x1 rounded-circle overflow-hidden">
-                <img src="assets/dist/img/kevin2.png" class="card-img-top img-cover" alt="kevin">
+                <img src="assets/dist/img/kevin3.png" class="card-img-top img-cover" alt="kevin">
               </div>
 
 
               <!-- start of links -->
-                <div class="card-body">
-                  <p class="card-text" style="text-align: center;"></p>
+                <div class="card-body d-flex justify-content-center">
                   <a href="https://github.com/kevintheepicguy" target="_blank" class="btn btn-primary">GitHub</a>
                   <a href="https://www.linkedin.com/in/kevin-olson12/" target="_blank" class="btn btn-primary">LinkedIn</a>
                   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" onclick="closeOpenMain()">Resume</button>
@@ -178,7 +178,7 @@
             <!-- start of cool animation-->
             <!-- resume section. deafult is closed and hiden -->
               <div id="collapseExampleMain" class="drawingSection">
-                <h1>Draw on me! <h5>(shape recognition comming soon)</h5></h1>
+                <h1>Draw on me! <h5>(shape recognition coming soon)</h5></h1>
                 <script src="assets/dist/js/drawing.js" ></script>
               </div>
           <!-- <div>section above resume</div> -->
@@ -235,46 +235,63 @@
                 <div style="width: 90%; padding-left: 10%;">
                     <div class="slide-left-1">
                       <h4> 
-                        I am a recent college graduate from Illinois State University with a degree in Information systems and a 
-                        focus in system design.
+                        I am a new graduate from Illinois State University with a degree in 
+                        Information Technology. I love to teach myself new skills within
+                        the technology sphere. I am always keeping up with new technologies 
+                        that I can utilize to improve my skill set. 
+                        <strong>I am currently looking for a Software Engineer role.</strong>
                       </h4>
                       <br>
                     </div>  
                     
                     <div class="slide-left-2">
                       <h4>
-                        I am looking to levarage my new Information Sysytems degree to further my software engineer career. 
-                        I have strong skills in Python, C, HTML & microcontrollers. I also have very strong skills within Lunix enviroments.
+                        I have spent most of my free time developing projects for fun on the side. Some of my 
+                        proudest projects are the 2d platformer I made with help from my friends, 
+                        my website(that you are currently on!), and my AirMouse Project. They are listed
+                        below if you want more detail on the projects ive made.These are my favorite projects I've 
+                        made, and I am very proud of all of them. I have developed so many new skills 
+                        about Software development from my side projects that can only be made from going beyond what was needed.
                       </h4>
                       <br>
                     </div>
                     <div class="slide-left-3">
                       <h4>
-                        I often utilize my skills in programming, microcontrollers, 3D modeling, and 
-                        Linux in my free time to complete side projects. I am eager to learn about how to implement different 
-                        automation techniques to develop an efficient work flow for the end user. Check out my most recent work on 
-                        <a href="https://github.com/kevintheepicguy">Github! </a>
+                        Development is not the only hobby that I have spent many hours on, I have 
+                        also been administering my own home Linux server, configuring many services 
+                        such as a file server, HomeAssistant, VPN, and many more. I initially had 
+                        zero experience with Linux and over the past two years I have improved my 
+                        skills vastly and I am now very confident in my ability to navigate any Linux system.
+                        I have also been working with Windows Server 2019 to boost my experience with new systems.
                       </h4>
                       <br>
                     </div>
                     <div class="slide-left-4">
                       <h4>
-                        I have a strong passion for anything that involves recent advancements and automation of any task. 
-                        I am always looking to expand upon my skills and find ways to implement emerging technologies into my work. 
+                        I have completed an Internship at Advocate Aroura Healthcare. My roles were 
+                        primarily in a project manager type of role, I would participate in meetings 
+                        o plan out future system upgrades and I managed the structure of the file 
+                        storage system. I also provided remote and in-person technical support for 
+                        the newly installed hardware/software. I also have been working at Costco 
+                        Wholesale from 2018 to 2023. During this time I excelled in customer 
+                        service and proper communication with customers and management.                      
                       </h4>
                       <br>
-                    </div>
-                    <div class="slide-left-5">
-                      <h4>
-                        I strive to always do the best work so I can add onto my existing understanding of computer science. 
-                        I have a practical approach to problem solving: there’s always a solution to any roadblock, sometimes 
-                        you just haven’t found it yet! 
-                      </h4>
                     </div>
                   </div>
                 </div>
               </div>
         </div>
+
+        <!-- start of skills/ classes -->
+        <!-- <div class="skills">
+        <div>
+          <h1>hi, make this slide in?</h1>
+        </div>
+
+        </div> -->
+        <!-- end of skills/ classes -->
+
         <!-- end of the about me section -->
       </div>
     </div>
@@ -295,7 +312,7 @@
 
     
     <!-- start of section header -->
-    <section class="py-5 text-center container">
+    <section class="py-5 text-center container" id="projects">
       <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
           <h1 class="fw-light">My recent projects!</h1>
@@ -369,27 +386,6 @@
           </a>
           </div>
           <!-- end of each card -->
-
-
-
-          <!-- start of each card -->
-                                    <!-- <div class="col">
-                                      <a href="comingSoon.html">
-                                      <div class="card shadow-sm">
-                                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                                        <div class="card-body">
-                                          <h3 class="card-text" style="text-align: center;">Advent Of Code (2022)</h3>
-                                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                          <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group">
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      </a>
-                                    </div> -->
-          <!-- end of each card -->
-
 
 
           <!-- start of each card -->
@@ -524,8 +520,8 @@
     <footer class="py-3 my-4 " style="text-align: center;">
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
         <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Projects</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link px-2 text-muted">Projects</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-muted">Contact</a></li>
       </ul>
       <ul class="nav justify-content-center pb-3 mb-3 text-muted">
         <li class="nav-item"><a href="">Kevin Olson</a></li>
