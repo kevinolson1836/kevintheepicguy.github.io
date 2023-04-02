@@ -28,6 +28,8 @@
 
   <script src="assets/dist/js/sidebars.js"></script>
 
+  <script src="assets/dist/js/jquery.js"></script>
+
     
     <!-- Custom styles for this template -->
     <link href="assets/dist/css/sidebars.css" rel="stylesheet">
@@ -243,7 +245,6 @@
                         Information Technology. I love to teach myself new skills within
                         the technology sphere. I am always keeping up with new technologies 
                         that I can utilize to improve my skill set. 
-                        <strong>I am currently looking for a Software Engineer role.</strong>
                       </h4>
                       <br>
                     </div>  
@@ -290,68 +291,43 @@
                       </h4>
                       <br>
                     </div>
-                   
+
                     <div class="slide-left-4">
                       <h4>
-                        In the future I plan to be an effective softward developer 
-                        -- always learning, adapting to, and mastering emerging technologies.
-                         <!--talk about perceveince and sticking with something. I dont get fustrated and see it thru till completion. I have a lot of inititive and tinkering with things my self  -->
+                         
+                         <!--talk about perceveince and sticking with something. 
+                          I dont get fustrated and see it thru till completion. 
+                          I have a lot of inititive and tinkering with things my self  -->
                       </h4>
+                      <br>
+                                        
+                    <div class="slide-left-4">
+                      <h4>
+                        In the future I plan to be an effective software Engineer 
+                        -- always learning, adapting to, and mastering emerging technologies.
+                      </h4>
+                      <h3>
+                        <strong>I am currently looking for a Software Engineer role.</strong>
+
+                      </h3>
+
+                         <!--talk about perceveince and sticking with something. I dont get fustrated and see it thru till completion. I have a lot of inititive and tinkering with things my self  -->
                       <br>
                     </div>
 
                   </div>
                 </div>
+                </div>
               </div>
         </div>
 
-
-
-      <script>
-        var shouldFadeIn = 0;
-
-        function checkIfVis(element){
-          // if box is visable and have only triggered once 
-          if ($('#boxxxxx').visible( true ) && shouldFadeIn == 0){
-              console.log("is vis");
-              shouldFadeIn = 1;
-              clearTimeout(checkIfVis );
-
-              // slide the element in (in mili seconds)
-              $("#boxxxxx").animate({marginLeft: "20%"}, 3000);
-              // document.getElementById("boxxxxx").style.paddingLeft = "100px";
-
-          }
-          setTimeout(checkIfVis, 500);
-        }
-
-        // animation = setInterval(frame, 5);
-
-        // function frame() {
-        //   if (/* test for finished */) {
-        //     clearInterval(id);
-        //   } else {
-        //     /* code to change the element style */ 
-        //   }
-        // }
-
-        $(document).ready(function(){
-          checkIfVis()
-        });
-        
-      </script>
-
-
-
-
-
         <!-- start of skills/ classes -->
-        <!-- <div class="skills">
+        <div class="skills">
         <div >
-          <h1 id="boxxxxx">hi, make this slide in?</h1>
+ -->
         </div>
 
-        </div> -->
+        </div>
         <!-- end of skills/ classes -->
 
         <!-- end of the about me section -->
@@ -392,7 +368,7 @@
 
 
           <!-- start of each card -->
-          <div class="col">
+          <div id="firstProjectLink" class="col" onmouseover="growElement(this)" onmouseleave="shrinkElement(this)">
             <a href="air-mouse.html">
               <div class="card shadow-sm">
                 <img src="assets/dist/img/airMouse.jpg" alt="air-mouse.jpg" style="width: 100%; height:225px">
@@ -412,7 +388,7 @@
 
 
           <!-- start of each card -->        
-          <div class="col">
+          <div class="col" onmouseover="growElement(this)" onmouseleave="shrinkElement(this)">
             <a href="clientwebsite.html">
               <div class="card shadow-sm">
                 <img src="assets/dist/img/Fiala.PNG" alt="Fiala.png" style="width: 100%; height:225px">
@@ -432,7 +408,7 @@
 
 
           <!-- start of each card -->
-          <div class="col">
+          <div class="col" onmouseover="growElement(this)" onmouseleave="shrinkElement(this)">
             <a href="hackathon.html">
             <div class="card shadow-sm">
               <img src="assets/dist/img/hackathon.PNG" alt="Fiala.png" style="width: 100%; height:225px">
@@ -451,7 +427,7 @@
 
 
           <!-- start of each card -->
-          <div class="col">
+          <div class="col" onmouseover="growElement(this)" onmouseleave="shrinkElement(this)">
             <a href="mario.html">
             <div class="card shadow-sm">
               <img src="assets/dist/img/mario3.png" alt="Fiala.png" style="width: 100%; height:225px">
@@ -471,7 +447,7 @@
 
 
           <!-- start of each card -->
-          <div class="col">
+          <div class="col" onmouseover="growElement(this)" onmouseleave="shrinkElement(this)">
             <a href="commandLineCal.html">
             <div class="card shadow-sm">
               <img src="assets/dist/img/googleCal.PNG" alt="Fiala.png" style="width: 100%; height:225px">
@@ -491,7 +467,7 @@
 
 
           <!-- start of each card -->
-          <div class="col">
+          <div class="col" onmouseover="growElement(this)" onmouseleave="shrinkElement(this)">
             <a href="midiBoard.html">
             <div class="card shadow-sm">
               <img src="assets/dist/img/MIDIfront.jpg" alt="Fiala.png" style="width: 100%; height:225px">
@@ -509,7 +485,7 @@
           <!-- end of each card -->
 
            <!-- start of each card -->
-           <div class="col">
+           <div class="col" onmouseover="growElement(this)" onmouseleave="shrinkElement(this)">
             <a href="sevensegmentclock.html">
             <div class="card shadow-sm">
               <img src="assets/dist/img/sevensegment.png" alt="seven-segment-clock" style="width: 100%; height:225px">
@@ -527,7 +503,7 @@
           <!-- end of each card -->
 
            <!-- start of each card -->
-           <div class="col">
+           <div class="col" onmouseover="growElement(this)" onmouseleave="shrinkElement(this)">
             <a href="audioreactivelights.html">
             <div class="card shadow-sm">
               <img src="assets/dist/img/audioreactivelights.png" alt="seven-segment-clock" style="width: 100%; height:225px">
@@ -545,7 +521,7 @@
           <!-- end of each card -->
 
            <!-- start of each card -->
-           <div class="col">
+           <div class="col" onmouseover="growElement(this)" onmouseleave="shrinkElement(this)">
             <a href="musclemusic.html">
             <div class="card shadow-sm">
               <img src="assets/dist/img/musclemusic.jpg" alt="seven-segment-clock" style="width: 100%; height:225px">
