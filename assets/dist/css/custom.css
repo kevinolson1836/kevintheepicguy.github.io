@@ -255,11 +255,18 @@
   height: 512px; width: 512px; text-align: center;
 }
 
+/* when on mobile */
 @media only screen and (max-width: 600px){
   .drawingSection{
     display: none;/* drawing does not work on mobile working on a fix */ 
     height: 212px; width: 212px; text-align: center;
     overscroll-behavior: contain;
   }
-  
+  .custom-col{
+    /* padding: 40%; */
+  }
+}
+
+.custom-col{
+  padding: 1%;
 }
