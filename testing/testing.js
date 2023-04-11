@@ -45,7 +45,19 @@ function setup() {
     resetPlayerLocation();
 
     caveImg = loadImage('/assets/dist/img/cave2.png'); // Load the image
-    playerImg = loadImage('/assets/dist/img/player.png');
+    // playerImg = loadImage('/assets/dist/img/player.png');
+
+    shapeShifterAni = loadAnimation(
+		'/assets/dist/img/playerImgs/forward11.png',
+		'/assets/dist/img/playerImgs/forward22.png',
+		'/assets/dist/img/playerImgs/forward33.png',
+		'/assets/dist/img/playerImgs/forward44.png',
+		'/assets/dist/img/playerImgs/forward55.png',
+
+	);
+
+	shapeShifterAni.frameDelay = 6;
+
 
     //draw canvas if not on a mobile device
     if(width > 600){
@@ -131,6 +143,9 @@ function draw() {
         scenesIndex = scenes.length-1
     }
 
+    animation(shapeShifterAni, playerX, playerY);
+
+
     if (DEBUG){
         console.log("playerX: " + playerX + "    " + "playerY: " + playerY);
         console.log("scense array length: ", scenes.length-1)
@@ -162,7 +177,7 @@ function drawGround(){
 
 function drawPlayer(){
         rect(playerX, playerY, 50, 50);
-        image(playerImg, 50, 50, playerImg.width * playerImgScale, playerImg.height * playerImgScale);
+        // image(playerImg, 50, 50, playerImg.width * playerImgScale, playerImg.height * playerImgScale);
         
 }
 
@@ -170,22 +185,22 @@ function drawPlayer(){
 
 function updatePlayerLocation(){
     // move up
-    // if (keyIsDown(UP_ARROW) || keyIsDown(87)) {
-    //     playerY -= moveSpeed;
-    // }
+    if (kb.pressing("up")) {
+        playerY -= moveSpeed;
+    }
 
     // // move down
-    // if (keyIsDown(DOWN_ARROW) || keyIsDown(83)) {
-    //     playerY += moveSpeed;
-    // }
+    if (kb.pressing("down")) {
+        playerY += moveSpeed;
+    }
     
     // move left
-    if (keyIsDown(LEFT_ARROW) || keyIsDown(65)) {
+    if (kb.pressing("left")) {
         playerX -= moveSpeed;
     }
 
     // move right
-    if (keyIsDown(RIGHT_ARROW) || keyIsDown(68)) {
+    if (kb.pressing("right")) {
         playerX += moveSpeed;
     }
 }
@@ -228,7 +243,7 @@ function drawNiceTrybuddy(){
     textSize(width/32);
     textAlign(CENTER);
     text(introTxt, 40,50,width-(width*0.1),height/2)
-    image(img, 0, height / 2, img.width / 2, img.height / 2);
+    image(caveImg, width-(caveImg.width*(caveImgScale-0.4)), height-(caveImg.height *(caveImgScale*1.66)) , caveImg.width * caveImgScale, caveImg.height * caveImgScale);
 
 
 };
