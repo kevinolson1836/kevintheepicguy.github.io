@@ -3,7 +3,11 @@
 function drawPlayer(){
     // rect(playerX, playerY, 50, 50);
     // animation(playerAinimationFrames, playerX, playerY);
-    
+    if (width <= 1500){
+        playerSprite.scale = 0.7;
+    } else {
+        playerSprite.scale = 0.9;
+    }
     if (playerSprite.collided(grassSprite) > 1) {
         playerSprite.vel.y = -0;
 	}
@@ -16,6 +20,7 @@ function drawPlayer(){
             playerSprite.ani = 'Idle backwards';
         }
     }
+    playerSprite.debug = 1;
 }
 
 

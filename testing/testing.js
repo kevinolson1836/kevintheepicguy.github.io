@@ -28,6 +28,7 @@ let playerImgScale = 11.5;
 let dirtSprite;
 let grassSprite;
 let playerSprite;
+let caveSprite;
 
 let canJump = 1;
 let jumpHeight = 6;
@@ -50,7 +51,8 @@ function setup() {
     
     dirtSprite = new Sprite();
     grassSprite = new Sprite();
-    playerSprite = new Sprite(100,400);
+    caveSprite = new Sprite(0,100,25,100);
+    playerSprite = new Sprite(100,100, 130,110);
 
     resetPlayerLocation();
 
