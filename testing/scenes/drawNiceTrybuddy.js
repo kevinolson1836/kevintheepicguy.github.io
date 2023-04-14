@@ -1,5 +1,8 @@
+
+// draws the niceTryBuddy Scene
 function drawNiceTrybuddy(){
-    drawGround();
+    
+    // possible responses
     let responsses = [
         "The text-based adventure game had grown tired of players who always took the easy route. As the player tried to cheat their way through a particularly difficult puzzle, the game responded with a snarky comment: 'Nice try, but you can't outsmart me that easily.'",
         "The text-based adventure game is not as dumb as you think it is. you better not keep this up or else there will be dire consequences to come latter on.",
@@ -11,14 +14,17 @@ function drawNiceTrybuddy(){
         "Congratulations on ignoring all the helpful tips and hints in the text-based adventure. At least you can figure out how to move, unlike some others.",
         "So you're not following the rules in the text-based adventure. That's great, because rules are for losers. Who needs structure and logic when you have pure unbridled chaos?"
     ]
+
+    // picks a new response
     if (genNewRepsonse){
-        introTxt = responsses[Math.floor(Math.random()*responsses.length)];
+        niceTryTxt = responsses[Math.floor(Math.random()*responsses.length)];
         genNewRepsonse = 0;
     }
+
+    drawGround(); // draw the ground
+    
+    // draws text on screen 
     textSize(width/32);
     textAlign(CENTER);
-    text(introTxt, 40,50,width-(width*0.1),height/2)
-    image(caveImg, width-(caveImg.width*(caveImgScale-0.4)), height-(caveImg.height *(caveImgScale*1.66)) , caveImg.width * caveImgScale, caveImg.height * caveImgScale);
-
-
+    text(niceTryTxt, 40,50,width-(width*0.1),height/2)
 };

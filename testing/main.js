@@ -4,36 +4,38 @@ const groundBrown = "#5c2202";
 const groundGreen = "#008013";
 const skyColor = '#1ec7fa';
 
-const offset = 50;
-
-const drawNewScreenPercent = 0.05
 
 const parentDiv = "main";
 
-// -1 to remove the scroll bar
+// size for the canvas
 const clientHeight = document.getElementById("body").clientHeight;
 const clientWidth = document.getElementById("body").clientWidth;
 
-let playerX;
-let playerY;
-
+// the Index of what scene to draw
 let scenesIndex = 0;
 
+// should draw niceTryBuddy and generate a new response on screen
 let niceTrybuddy = 0;
 let genNewRepsonse = 1;
 
-let caveImgScale = 1.5;
-let playerImgScale = 11.5;
-
+// sprites defined here
 let dirtSprite;
 let grassSprite;
 let playerSprite;
 let caveSprite;
 
+// height of the ground
+const groundHeight = 50;
+
 let canJump = 1;
-let jumpHeight = 6;
-const moveSpeed = 4;
+let canMoveAgain = 1;
+const jumpHeight = 6;
+const moveSpeed = 8;
 let playerDirection = "right";
+
+let leftCollider;
+let rightCollider;
+const sideColliderWidth = 10;
 
 const scenes = [
     "intro",
@@ -44,22 +46,28 @@ const scenes = [
     "nowWhat"
 ];
 
+// gets called on initial loading and only once 
 function setup() {
 
     var width = screen.width;
     var height = screen.height;  
     
+    // assign sprites 
     dirtSprite = new Sprite();
     grassSprite = new Sprite();
     caveSprite = new Sprite(0,100,25,100);
     playerSprite = new Sprite(100,100, 130,110);
+    leftCollider = new Sprite();
+    rightCollider = new Sprite();
 
+    // place the player in the correct spot
     resetPlayerLocation();
-
-    loadCaveImg();
-
+    
+    // sets world gravity
     world.gravity.y = 10;
 
+    
+    // loads animation frames
     playerForwardAinimationFrames = loadAnimation(
 		'/assets/dist/img/playerImgs/forward11.png',
 		'/assets/dist/img/playerImgs/forward22.png',
@@ -69,6 +77,8 @@ function setup() {
 
 	);
 
+
+    // loads animation frames
     playerBackwardAinimationFrames = loadAnimation(
 		'/assets/dist/img/playerImgs/backwards11.png',
 		'/assets/dist/img/playerImgs/backwards22.png',
@@ -78,19 +88,25 @@ function setup() {
 
 	);
 
+
+    // loads animation frames
     playerBackwardIdleAinimationFrames = loadAnimation(
 		'/assets/dist/img/playerImgs/idlebackwards.png',
 	);
 
+
+    // loads animation frames
     playerForwardIdleAinimationFrames = loadAnimation(
 		'/assets/dist/img/playerImgs/idleForward.png',
 	);
 
+    //adds the animations to the player and sets the delay
 	playerForwardAinimationFrames.frameDelay = 6;
     playerSprite.addAni("forward",playerForwardAinimationFrames);
     playerSprite.addAni("backwards",playerBackwardAinimationFrames);
     playerSprite.addAni("Idle backwards",playerBackwardIdleAinimationFrames);
     playerSprite.addAni("Idle forwards",playerForwardIdleAinimationFrames);
+
 
     //draw canvas if not on a mobile device
     if(width > 600){
@@ -100,20 +116,26 @@ function setup() {
         background(skyColor);
     } else{
         // screen to small
-        alert("screen is too small for now. sorry");
+        alert("Screen is too small for now try again on desktop or with a bigger display. Sorry :(");
+    }
+}
+
+
+
+// lets player move again after a scene change after they touch the grass or dirt
+function checkGroundColid(){
+    if (playerSprite.colliding(grassSprite)>2 || playerSprite.colliding(dirtSprite) >2) {
+        canMoveAgain = 1;
     }
 }
 
 
 
 
-
-
-
-// the main loop
+// the main loop. try's to call it 60 times a second
 function draw() {
     
-    // clear the backgound to redraw everything
+    // clear the background to redraw everything
     background(skyColor);
     
     // if a key is pressed, update the players location then draw again
@@ -121,42 +143,48 @@ function draw() {
         updatePlayerLocation();
     }
     drawPlayer();
-    
+
+    // will reset the players ability to move to True if touching grass or the dirt
+    checkGroundColid();
+
+    // press q to face forward. mainly debugging purposes 
+    if(kb.pressing("q")){
+        resetPlayerLocation();
+        playerSprite.rotation = 0;
+        console.log("rotted to 0");
+    }
+
     // draw the correct scene
     switch (scenesIndex){
+        // initial screen
         case 0:
+            // if player goes backwards, draw the niceTryBuddy scene else main into
             if(niceTrybuddy){
                 drawNiceTrybuddy();
             } else {
                 drawIntro(dirtSprite, grassSprite);
             }
 
+        // draws the highschool scene 
         case 1:
             drawHighschool();
         
+        // draws the drawIndianaState scene 
         case 2: 
             drawIndianaState();
 
+        // draws drawIllinoisState scene
         case 3: 
             drawIllinoisState();
 
+        //draws nowWhat scene
         case 4: 
             drawNowWhat();
-            
-
     }
     
-    // player at the farthest right, draw next screen in list 
-    if (playerX > (width - (width * drawNewScreenPercent)) ){
-        scenesIndex +=1;
-        resetPlayerLocation();
-    }
-    
-    // player at the farthest left, draw previous screen in list 
-    if (playerX < (width * (drawNewScreenPercent/5))){
-        scenesIndex -=1;
-        resetPlayerLocation();
-    }
+    // checks if player touches edge of the screen to draw the next/previous scene
+    checkCollitionWithLeftCollider();
+    checkCollitionWithRightCollider();
     
     // dont let the scenesIndex go below 0
     if (scenesIndex < 0){
@@ -165,18 +193,11 @@ function draw() {
         genNewRepsonse = 1;
     }
 
-    // dont let the scenesindex go above the length of the array
+    // don't let the scenesIndex go above the length of the array
     if (scenesIndex > scenes.length-1){
         scenesIndex = scenes.length-1
     }
-
-
-
-    if (DEBUG){
-        console.log("playerX: " + playerX + "    " + "playerY: " + playerY);
-        console.log("scense array length: ", scenes.length-1)
-        console.log("scenesIndex: ", scenesIndex);
-        }
-    }
+   
+}
 
 

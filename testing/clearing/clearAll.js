@@ -1,5 +1,5 @@
 
 // not yet implemented
-function drawCovid(){
+function cleanUp(){
 
 }

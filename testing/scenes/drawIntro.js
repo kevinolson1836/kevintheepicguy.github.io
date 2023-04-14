@@ -2,46 +2,63 @@
 var introTxt = "This self aware text-based adventure game prompted the player to make a decision:\n\n should they continue forward into the dangerous cave system or turn around and hightail it out of here?\n\n The player chose to take their chances and go forward.\n\n Step 1) figure out how to move.\n Step 2) Adventure!" 
 let FIRST_RAN = 1
 
-function loadCaveImg(){
-    caveImg = loadImage('/assets/dist/img/cave2.png'); // Load the image
+
+// removes introScene stuff  
+function cleanUpIntro(){
+    caveSprite.visible  = 0;
+    caveSprite.collider = 'none';
 }
 
-function drawIntroGround(dirtSprite, grassSprite, caveSprite){
-
-    dirtSprite.color = groundBrown;
-    dirtSprite.h = height/14;
-    dirtSprite.w = width;
-    dirtSprite.y = height-dirtSprite.h/2;
-    dirtSprite.x = width/2;
-    dirtSprite.collider = 'kinematic';
-    // dirtSprite.debug = 1; dddd
-
-
-
-    grassSprite.color = groundGreen;
-    grassSprite.w = width*2;
-    grassSprite.y = height-( dirtSprite.h*1.5);
-
-    grassSprite.x = width/2
-    grassSprite.h = height/14;
-    grassSprite.collider = 'kinematic';
-    // grassSprite.debug = 1;    
-
+// draws drawCaveSprite
+function drawCaveSprite(){
     caveSprite.img = "/assets/dist/img/cave2.png";
-    caveSprite.collider = 'kinematic';
+    caveSprite.collider = 'static';
     caveSprite.x = width;
-    caveSprite.y = height-((grassSprite.h*2 + dirtSprite.h+15))
+    caveSprite.y = height - (grassSprite.h + dirtSprite.h) - (caveSprite.h/2);
     caveSprite.scale = playerSprite.scale*2.3; 
     caveSprite.debug =1;
-
-    console.log(grassSprite.getBoundingBox)
-
+    caveSprite.visible  = 1;
 }
 
+// if player goes into cave or goes left update the sceneIndex and cleanup current scene
+function checkForSceneChange(){
+    
+    // player goes right
+    if (playerSprite.collides (caveSprite)) {
+        scenesIndex+=1;
+        resetPlayerLocation(); 
+        cleanUpIntro();
+        canMoveAgain = 0;
+        playerSprite.rotation = 0;
+        playerDirection = "right";
+	}
+
+    // player goes left
+    if (playerSprite.collides (leftCollider)) {
+        scenesIndex-=1;
+        resetPlayerLocation(); 
+        cleanUpIntro();
+        canMoveAgain = 0;
+        playerSprite.rotation = 180;
+        playerDirection = "left";
+	}
+}
+
+
+// main function to call to draw the scene
 function drawIntro(){
-    drawIntroGround(dirtSprite, grassSprite, caveSprite);
+    drawGround(); // makes the ground 
+    drawCaveSprite(); //makes the cave 
+    drawLeftCollider(); //make the scene changer collider
+    drawRightCollider(); //make the scene changer collider
+    
+    // draws text on screen 
     textSize(height/20);
     textAlign(CENTER);
     text(introTxt, 40,50,width-(width*0.1),height/1.2)
-    // image(caveImg, width-(caveImg.width*(caveImgScale-0.4)), height-(caveImg.height *(caveImgScale*1.66)) , caveImg.width * caveImgScale, caveImg.height * caveImgScale);
+    
+    // check if player is on the ground and if the scene needs to be updated
+    checkGroundColid();
+    checkForSceneChange();
 };
+
