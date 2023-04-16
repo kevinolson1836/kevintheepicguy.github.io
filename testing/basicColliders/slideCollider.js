@@ -16,6 +16,8 @@ function checkCollitionWithLeftCollider(){
     if (playerSprite.collides(leftCollider)){
         scenesIndex -=1;
         resetPlayerLocation();
+        thisRanAlready = 1;
+
     }
 }
 
@@ -34,6 +36,8 @@ function drawRightCollider(){
     rightCollider.y = height/2 //place sprite in vertical center of the screen
     rightCollider.collider = 'static'; // player cant move it, but still can collied with it
     rightCollider.visible = 0; // not visible to player
+
+
 }
 
 
@@ -51,5 +55,7 @@ function checkCollitionWithRightCollider(){
 
         // reset player
         resetPlayerLocation();
+        thisRanAlready = 1;
+        
     }
 }

@@ -24,9 +24,11 @@ let grassSprite;
 let playerSprite;
 let caveSprite;
 
-// height of the ground
-const groundHeight = 50;
+let grassVisualSprite;
 
+// height of the ground
+const groundHeight = 75;
+// let tempText = '';
 let canJump = 1;
 let canMoveAgain = 1;
 const jumpHeight = 6;
@@ -63,6 +65,9 @@ function setup() {
     // place the player in the correct spot
     resetPlayerLocation();
     
+    caveBackground = loadImage('/assets/dist/img/cavebackgrond/cavebackground.png');
+
+
     // sets world gravity
     world.gravity.y = 10;
 
@@ -135,8 +140,6 @@ function checkGroundColid(){
 // the main loop. try's to call it 60 times a second
 function draw() {
     
-    // clear the background to redraw everything
-    background(skyColor);
     
     // if a key is pressed, update the players location then draw again
     if (keyIsPressed === true) { 
@@ -164,22 +167,40 @@ function draw() {
             } else {
                 drawIntro(dirtSprite, grassSprite);
             }
+            
+            // must break out of the case to not call every other case
+            break;
 
         // draws the highschool scene 
         case 1:
             drawHighschool();
-        
+
+           // must break out of the case to not call every other case
+           break;
+
+          
         // draws the drawIndianaState scene 
         case 2: 
             drawIndianaState();
+            console.log("dddd");
+
+              // must break out of the case to not call every other case
+              break;
+
 
         // draws drawIllinoisState scene
         case 3: 
             drawIllinoisState();
+              // must break out of the case to not call every other case
+            break;
+
 
         //draws nowWhat scene
         case 4: 
             drawNowWhat();
+            // must break out of the case to not call every other case
+            break;
+
     }
     
     // checks if player touches edge of the screen to draw the next/previous scene
@@ -197,7 +218,6 @@ function draw() {
     if (scenesIndex > scenes.length-1){
         scenesIndex = scenes.length-1
     }
-   
 }
 
 

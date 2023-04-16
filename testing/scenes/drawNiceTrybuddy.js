@@ -20,11 +20,11 @@ function drawNiceTrybuddy(){
         niceTryTxt = responsses[Math.floor(Math.random()*responsses.length)];
         genNewRepsonse = 0;
     }
-
+    background(skyColor);
     drawGround(); // draw the ground
     
     // draws text on screen 
-    textSize(width/32);
-    textAlign(CENTER);
-    text(niceTryTxt, 40,50,width-(width*0.1),height/2)
+    // textSize(width/32);
+    // textAlign(CENTER);
+    drawTextOnScreen(niceTryTxt, 40,50,1);
 };
