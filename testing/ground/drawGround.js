@@ -1,33 +1,32 @@
-let drawGroundFirstRan =1;
+let drawGroundFirstRan = 1;
+let drawCeilingFirstRan = 1;
 
 
 function randomIntFromInterval(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
 
-// first type of small rock
-let smallRockTileID1 = randomIntFromInterval(1,10);
-let smallRockTileID2 = randomIntFromInterval(10,20);
+// top layer
+let altImg1 = randomIntFromInterval(1,8);
+let altImg2 = randomIntFromInterval(12,25);
 
-// second type of small rock
-let smallRockTileID4 = randomIntFromInterval(2,10);
-let smallRockTileID5 = randomIntFromInterval(10,25);
 
-// big rocks
-let bigRockTileID1 = randomIntFromInterval(4,16);
-let bigRockTileID2 = randomIntFromInterval(18,25);
+// second layer
+let altImg3 = randomIntFromInterval(2,20);
+let altImg4 = randomIntFromInterval(20,35);
+let altImg5 = randomIntFromInterval(4,16);
 
 
 // draws the ground
-function drawGround(){
+function drawGround(topLayerImg, topLayerAltImg, topLayerAltImg2, secondLayerMainImg, secondLayerAltImg1, secondLayerAltImg2, secondLayerAltImg3){
     if(drawGroundFirstRan){
         drawGroundFirstRan = 0;
         grassVisualSprite = new Sprite();
     }
 
 
-    
-    grassVisualSprite.img = "/assets/dist/img/spriteSheet/grassTile.png";
+    // "/assets/dist/img/spriteSheet/grassTile.png"
+    grassVisualSprite.img = topLayerImg;
     grassVisualSprite.scale =3;
     grassVisualSprite.w = 48;
     grassVisualSprite.h = 48;
@@ -46,15 +45,30 @@ function drawGround(){
     
     
     
+    firstLayerSpriteCount =0;
     //draw the ground sprite. width+spritewidth to draw one extra one to fill the gap at the end of screen 
     for (let i = 0; i < width+grassVisualSprite.w; i+= grassVisualSprite.w) {
         grassVisualSprite.x =i;
-        grassVisualSprite.draw()
+         // draws the first type of small rock
+         if (firstLayerSpriteCount == altImg1){
+            grassVisualSprite.img = topLayerAltImg;
+            grassVisualSprite.draw()
+            grassVisualSprite.img = topLayerImg;
+        } else if (firstLayerSpriteCount == altImg2){
+            grassVisualSprite.img = topLayerAltImg2;
+            grassVisualSprite.draw()
+            grassVisualSprite.img = topLayerImg;
+        } else {
+            grassVisualSprite.draw()
+        }
+        firstLayerSpriteCount++;
+
     }
     
     
     // dirt sprite
-    dirtSprite.img = "/assets/dist/img/spriteSheet/dirtTile.png";
+    // "/assets/dist/img/spriteSheet/dirtTile.png"
+    dirtSprite.img = secondLayerMainImg;
     dirtSprite.scale =3;
     dirtSprite.w = 48;
     dirtSprite.h = 48;
@@ -64,32 +78,31 @@ function drawGround(){
     
     //draw the ground sprite. width+spritewidth to draw one extra one to fill the gap at the end of screen 
     for(let x = 1; x < 3; x++ ){
-        let dirtSpriteCount =0;
+        let secondLayerSpriteCount =0;
         dirtSprite.y = height - groundHeight + (grassSprite.h*x);
         for (let i = 0; i < width+dirtSprite.w; i+= dirtSprite.w) {
             dirtSprite.x =i;
-            dirtSpriteCount++;
+            secondLayerSpriteCount++;
             
             // draws the first type of small rock
-            if (dirtSpriteCount == smallRockTileID1 || dirtSpriteCount == smallRockTileID2 ){
-                dirtSprite.img = "/assets/dist/img/spriteSheet/dirtTileWithRock.png";
+            if (secondLayerSpriteCount == altImg3){
+                dirtSprite.img = secondLayerAltImg1;
                 dirtSprite.draw()
-                dirtSprite.img = "/assets/dist/img/spriteSheet/dirtTile.png";
+                dirtSprite.img = secondLayerMainImg;
             } 
             
             // draws the second type of small rock
-            else if (dirtSpriteCount == smallRockTileID4 || dirtSpriteCount == smallRockTileID5){
-                dirtSprite.img = "/assets/dist/img/spriteSheet/dirtTileWithRock3.png";
+            else if (secondLayerSpriteCount == altImg4){
+                dirtSprite.img = secondLayerAltImg2;
                 dirtSprite.draw()
-                dirtSprite.img = "/assets/dist/img/spriteSheet/dirtTile.png";
+                dirtSprite.img = secondLayerMainImg;
             }
 
             // draws the big rock
-            else if(dirtSpriteCount == bigRockTileID1 ||dirtSpriteCount == bigRockTileID2 ) {
-                dirtSprite.img = "/assets/dist/img/spriteSheet/dirtTileWithBigRock.png";
+            else if(secondLayerSpriteCount == altImg5) {
+                dirtSprite.img = secondLayerAltImg3;
                 dirtSprite.draw()
-                dirtSprite.img = "/assets/dist/img/spriteSheet/dirtTile.png";
-                console.log(bigRockTileID2);
+                dirtSprite.img = secondLayerMainImg;
             } 
             
             // draw normal dirt tile
@@ -100,5 +113,37 @@ function drawGround(){
         }
     //   console.log(dirtSpriteCount);
   }
+
+}
+
+
+
+function drawCeiling(){
+
+    if(drawCeilingFirstRan){
+        drawCeilingFirstRan = 0;
+        ceilingSprite = new Sprite();
+    }
+
+    // dirt sprite
+    // "/assets/dist/img/spriteSheet/dirtTile.png"
+    ceilingSprite.img = "/assets/dist/img/spriteSheet/dirtTile.png";
+    ceilingSprite.scale =3;
+    ceilingSprite.w = 48;
+    ceilingSprite.h = 48;
+    ceilingSprite.y = 0;
+    ceilingSprite.x = 0;
+    ceilingSprite.collider = 'static';
+    // dirtSprite.debug = 1
+
+    let caveCeilingCount =0;
+    for(let y =0; y<(height -(48*12))+48;y+=48){
+        ceilingSprite.y = y;
+        for(let x =0; x < (width+48) - (48*caveCeilingCount ); x+=48){
+            ceilingSprite.x = x;
+            ceilingSprite.draw();
+        }
+        caveCeilingCount++;
+    }
 
 }

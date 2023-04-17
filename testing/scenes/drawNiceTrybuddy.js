@@ -21,7 +21,12 @@ function drawNiceTrybuddy(){
         genNewRepsonse = 0;
     }
     background(skyColor);
-    drawGround(); // draw the ground
+    drawGround("/assets/dist/img/spriteSheet/grassTile.png", 
+    "/assets/dist/img/spriteSheet/dirtTile.png",
+    "/assets/dist/img/spriteSheet/dirtTileWithRock.png",
+    "/assets/dist/img/spriteSheet/dirtTileWithRock3.png",
+    "/assets/dist/img/spriteSheet/dirtTileWithBigRock.png"
+); // makes the ground 
     
     // draws text on screen 
     // textSize(width/32);

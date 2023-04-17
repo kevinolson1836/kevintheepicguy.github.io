@@ -1,30 +1,27 @@
 
 let drawHighschoolFirstRan = 1;
 
+
+
 function drawHighschool(){
 
     if(drawHighschoolFirstRan){
         drawHighschoolFirstRan = 0;
         playerSprite.rotation = 0;
-        testSprite = new Sprite();
+        // testSprite = new Sprite();
         // testSprite.debug =1;
     }
 
-    background(skyColor);
-    testSprite.img = "/assets/dist/img/spriteSheet/grassTile.png";
-    testSprite.scale =3;
-    testSprite.w = 48;
-    testSprite.h = 48;
-    testSprite.y = height-150;
-    testSprite.collider = 'none';
+    background(caveColor);
     
-    //draw the ground sprite. width+spritewidth to draw one extra one to fill the gap at the end of screen 
-    for (let i = 0; i < width+testSprite.w; i+= testSprite.w) {
-        testSprite.x =i;
-        testSprite.draw()
-      }
-
-   
-    // grassSpriteList.append(tempSprite);
+    drawGround("/assets/dist/img/spriteSheet/classroomTileTop.png", 
+                "/assets/dist/img/spriteSheet/classroomTileTop1.png",
+                "/assets/dist/img/spriteSheet/classroomTileTop2.png",
+                "/assets/dist/img/spriteSheet/classroomTileBottom.png",
+                "/assets/dist/img/spriteSheet/classroomTileBottom1.png",
+                "/assets/dist/img/spriteSheet/classroomTileBottom2.png",
+                "/assets/dist/img/spriteSheet/classroomTileBottom3.png"
+    ); // makes the ground 
+    drawCeiling();
 
 }

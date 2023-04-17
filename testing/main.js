@@ -3,6 +3,7 @@ const DEBUG = 0;
 const groundBrown = "#5c2202";
 const groundGreen = "#008013";
 const skyColor = '#1ec7fa';
+const caveColor = '#747474';
 
 
 const parentDiv = "main";

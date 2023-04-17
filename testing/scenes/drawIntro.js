@@ -69,7 +69,14 @@ function checkForSceneChange(){
 // main function to call to draw the scene
 function drawIntro(){
     background(skyColor);
-    drawGround(); // makes the ground 
+    drawGround("/assets/dist/img/spriteSheet/grassTile.png",
+                "/assets/dist/img/spriteSheet/grassTile.png", 
+                "/assets/dist/img/spriteSheet/grassTile.png", 
+                "/assets/dist/img/spriteSheet/dirtTile.png",
+                "/assets/dist/img/spriteSheet/dirtTileWithRock.png",
+                "/assets/dist/img/spriteSheet/dirtTileWithRock3.png",
+                "/assets/dist/img/spriteSheet/dirtTileWithBigRock.png"
+    ); // makes the ground 
     drawCaveSprite(); //makes the cave 
     drawLeftCollider(); //make the scene changer collider
     drawRightCollider(); //make the scene changer collider
