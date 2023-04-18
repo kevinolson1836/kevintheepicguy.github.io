@@ -17,6 +17,8 @@ let altImg4 = randomIntFromInterval(20,35);
 let altImg5 = randomIntFromInterval(4,16);
 
 
+let randomRotation = randomIntFromInterval(1,1);
+
 // draws the ground
 function drawGround(topLayerImg, topLayerAltImg, topLayerAltImg2, secondLayerMainImg, secondLayerAltImg1, secondLayerAltImg2, secondLayerAltImg3){
     if(drawGroundFirstRan){
@@ -62,7 +64,6 @@ function drawGround(topLayerImg, topLayerAltImg, topLayerAltImg2, secondLayerMai
             grassVisualSprite.draw()
         }
         firstLayerSpriteCount++;
-
     }
     
     
@@ -111,11 +112,12 @@ function drawGround(topLayerImg, topLayerAltImg, topLayerAltImg2, secondLayerMai
             }
             
         }
-    //   console.log(dirtSpriteCount);
-  }
-
+        //   console.log(dirtSpriteCount);
+    }
+    
 }
 
+let caveCeilingCount =0;
 
 
 function drawCeiling(){
@@ -125,9 +127,8 @@ function drawCeiling(){
         ceilingSprite = new Sprite();
     }
 
-    // dirt sprite
-    // "/assets/dist/img/spriteSheet/dirtTile.png"
-    ceilingSprite.img = "/assets/dist/img/spriteSheet/dirtTile.png";
+    // ceiling sprite
+    ceilingSprite.img = "/assets/dist/img/spriteSheet/ceilingTile.png";
     ceilingSprite.scale =3;
     ceilingSprite.w = 48;
     ceilingSprite.h = 48;
@@ -136,14 +137,45 @@ function drawCeiling(){
     ceilingSprite.collider = 'static';
     // dirtSprite.debug = 1
 
-    let caveCeilingCount =0;
-    for(let y =0; y<(height -(48*12))+48;y+=48){
-        ceilingSprite.y = y;
-        for(let x =0; x < (width+48) - (48*caveCeilingCount ); x+=48){
-            ceilingSprite.x = x;
-            ceilingSprite.draw();
+   
+        caveCeilingCount =0;
+    
+
+    //loop until number of cells that fit verticals +1 (adding one because divide by 0 is infinity) 
+    for(let y=1; y < Math.floor((height/48)/2)+1; y+=1){
+        ceilingSprite.y = (y-1)*48;
+    
+        //loop until number of cells that fit horizontally divied by vertical cell id
+        for(let x =0; x < ((width/48)/y) +1; x+=1){
+            ceilingSprite.x = x*48;
+            if(0 == caveCeilingCount%18){
+                ceilingSprite.img = "/assets/dist/img/spriteSheet/ceilingTile2.png";
+                ceilingSprite.draw();
+                ceilingSprite.img = "/assets/dist/img/spriteSheet/ceilingTile.png";
+            }
+            else if(0 == caveCeilingCount%14){
+                ceilingSprite.img = "/assets/dist/img/spriteSheet/ceilingTile3.png";
+                ceilingSprite.draw();
+                ceilingSprite.img = "/assets/dist/img/spriteSheet/ceilingTile.png";
+            }
+            else if(0 == caveCeilingCount%21){
+                ceilingSprite.img = "/assets/dist/img/spriteSheet/ceilingTile4.png";
+                ceilingSprite.draw();
+                ceilingSprite.img = "/assets/dist/img/spriteSheet/ceilingTile.png";
+            } else {
+                ceilingSprite.draw();
+                ceilingSprite.img = "/assets/dist/img/spriteSheet/ceilingTile.png";
+            }
+
+            if(caveCeilingCount%randomRotation == 0){
+                ceilingSprite.rotation += 90;
+            }
+            // console.log(Math.floor(altImg4*5.4));
+            caveCeilingCount++;
         }
-        caveCeilingCount++;
+        
     }
+
+
 
 }

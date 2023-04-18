@@ -36,7 +36,7 @@ function updatePlayerLocation(){
     if(canMoveAgain){
         
         // player is jumping. Don't allow multiple jumps before hitting  the ground
-        if (kb.pressing("up") || kb.pressing("space")) {
+        if (kb.pressing("up") || kb.pressing("space") || kb.pressing("W") ) {
             if (canJump == 1){
                 playerSprite.vel.y = -jumpHeight;
                 canJump = 0;
@@ -49,7 +49,7 @@ function updatePlayerLocation(){
         }
     
         // move left
-        if (kb.pressing("left")) {
+        if (kb.pressing("left") || kb.pressing("A")) {
             playerSprite.vel.x = -moveSpeed;
             playerSprite.ani = 'backwards';
             playerDirection = "left";
@@ -57,7 +57,7 @@ function updatePlayerLocation(){
         }
     
         // move right
-        if (kb.pressing("right")) {
+        if (kb.pressing("right") || kb.pressing("D")) {
             playerSprite.vel.x = +moveSpeed;
             playerSprite.ani = 'forward';
             playerDirection = "right";
