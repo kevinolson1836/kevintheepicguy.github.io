@@ -27,6 +27,7 @@ let caveSprite;
 let chairSprite;
 let chairSprite2;
 let chairSprite3;
+let chalkBoardSprite;
 
 let grassVisualSprite;
 
