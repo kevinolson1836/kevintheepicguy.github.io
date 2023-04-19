@@ -24,6 +24,9 @@ let dirtSprite;
 let grassSprite;
 let playerSprite;
 let caveSprite;
+let chairSprite;
+let chairSprite2;
+let chairSprite3;
 
 let grassVisualSprite;
 
@@ -66,7 +69,7 @@ function setup() {
     // place the player in the correct spot
     resetPlayerLocation();
     
-    caveBackground = loadImage('/assets/dist/img/cavebackgrond/cavebackground.png');
+    // caveBackground = loadImage('/assets/dist/img/cavebackgrond/cavebackground.png');
 
 
     // sets world gravity

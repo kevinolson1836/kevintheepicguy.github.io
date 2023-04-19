@@ -74,7 +74,7 @@ function drawGround(topLayerImg, topLayerAltImg, topLayerAltImg2, secondLayerMai
     dirtSprite.w = 48;
     dirtSprite.h = 48;
     dirtSprite.y = height-groundHeight;
-    dirtSprite.collider = 'static';
+    dirtSprite.collider = 'kinematic';
     // dirtSprite.debug = 1
     
     //draw the ground sprite. width+spritewidth to draw one extra one to fill the gap at the end of screen 
@@ -134,7 +134,7 @@ function drawCeiling(){
     ceilingSprite.h = 48;
     ceilingSprite.y = 0;
     ceilingSprite.x = 0;
-    ceilingSprite.collider = 'static';
+    ceilingSprite.collider = 'kinematic';
     // dirtSprite.debug = 1
 
    
