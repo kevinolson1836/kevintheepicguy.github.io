@@ -25,7 +25,7 @@ function drawPlayer(){
     }
 
     // debug square
-    playerSprite.debug = 1;
+    // playerSprite.debug = 1;
 }
 
 

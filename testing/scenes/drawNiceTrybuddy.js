@@ -32,5 +32,6 @@ function drawNiceTrybuddy(){
     // draws text on screen 
     // textSize(width/32);
     // textAlign(CENTER);
-    drawTextOnScreen(niceTryTxt, 40,50,1);
+    drawTextOnScreen(niceTryTxt,40,50, width-(width*0.1), height/1.2, 1);
+
 };

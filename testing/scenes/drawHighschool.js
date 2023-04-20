@@ -6,22 +6,50 @@ function drawChairs(){
     let chair2 = playerSprite.colliding(chairSprite2)
     let chair3 = playerSprite.colliding(chairSprite3)
     let chalkBoard = playerSprite.colliding(chalkBoardSprite)
+
+    let chairCeiling1 = playerSprite.colliding(ceilingSprite)
+    let chairCeiling2 = playerSprite.colliding(ceilingSprite)
+    let chairCeiling3 = playerSprite.colliding(ceilingSprite)
+    let chalkBoardCeiling = playerSprite.colliding(ceilingSprite)
+
+    
     if(chair1){
         // chairSprite.vel.y = chair1*3
-        chairSprite.vel.x +=chair1+randomIntFromInterval(1,4);
-        chairSprite.vel.y -=chair1+randomIntFromInterval(1,4);
-        console.log(chair1);
+        chairSprite.vel.x +=chair1+randomIntFromInterval(1,20);
+        chairSprite.vel.y -=chair1+randomIntFromInterval(9,20);
     }
 
     if(chair2){
-        chairSprite2.vel.x +=chair2+randomIntFromInterval(1,4);
-        chairSprite2.vel.y -=chair2+randomIntFromInterval(1,4);
+        chairSprite2.vel.x +=chair2+randomIntFromInterval(1,20);
+        chairSprite2.vel.y -=chair2+randomIntFromInterval(9,20);
     }
 
     if(chair3){
-        chairSprite.vel.x +=chair3+randomIntFromInterval(1,4);
-        chairSprite3.vel.y -=chair3+randomIntFromInterval(1,4);
+        chairSprite.vel.x +=chair3+randomIntFromInterval(1,20);
+        chairSprite3.vel.y -=chair3+randomIntFromInterval(9,20);
     }
+    if(chalkBoard){
+        chalkBoardSprite.vel.x +=chalkBoard+randomIntFromInterval(1,20);
+        chalkBoardSprite.vel.y -=chalkBoard+randomIntFromInterval(9,20);
+    }
+
+    if(chairCeiling1){
+        chairSprite.vel.x =0;
+        chairSprite.vel.y =0;
+    }
+    if(chairCeiling2){
+        chairSprite2.vel.x =0;
+        chairSprite2.vel.y =0;
+    }
+    if(chairCeiling3){
+        chairSprite3.vel.x =0;
+        chairSprite3.vel.y =0;
+    }
+    if(chalkBoardCeiling){
+        chalkBoardSprite.vel.x =0;
+        chalkBoardSprite.vel.y =0;
+    }
+
 
 }
 
@@ -50,10 +78,11 @@ function drawHighschool(){
         chairSprite3.img = "/assets/dist/img/spriteSheet/chair.png";
         chalkBoardSprite.img = "/assets/dist/img/spriteSheet/chalkboard.png";
         
-        // chairSprite.collider = "static";
-        // chairSprite2.collider = "static";
-        // chairSprite3.collider = "static";
-        // chairSprite.debug =1;    dddddddddddddddddddddddddddddddddddddddddddddddddddddd
+        chairSprite.collider = "dynamic";
+        chairSprite2.collider = "dynamic";
+        chairSprite3.collider = "dynamic";
+        chairSprite.collider = "dynamic";
+        // chairSprite.debug = 1;
     }
 
     background(caveColor);
@@ -67,6 +96,13 @@ function drawHighschool(){
                 "/assets/dist/img/spriteSheet/classroomTileBottom3.png"
     ); // makes the ground 
     drawCeiling();
+
+   
+   
+   
+    let textStr = "You, the player, find yourself stumbling into a dark and mysterious cave. As you make your way deeper, you notice strange chairs and an old chalkboard covered in cryptic code. But there's something odd about this cave - the physics seem off….\n\nSuddenly, you hear a voice in your head - the voice of the game maker. It tells you that you've been chosen to take part in a unique adventure, one that will take you on a journey of discovery.\n\nAs you begin to explore the cave, you realize that this is not just any adventure game - it's a self-aware game that's mirroring the game maker‘s own journey of learning how to program."
+    textSize(height/30);
+    drawTextOnScreen(textStr, width/2 - (width/6),200, width/1.5, height/2, 1)
 
     drawChairs();
 

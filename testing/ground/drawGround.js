@@ -85,6 +85,9 @@ function drawGround(topLayerImg, topLayerAltImg, topLayerAltImg2, secondLayerMai
             dirtSprite.x =i;
             secondLayerSpriteCount++;
             
+            if(secondLayerSpriteCount%randomRotation == 1){
+                dirtSprite.rotation += 90;
+            }
             // draws the first type of small rock
             if (secondLayerSpriteCount == altImg3){
                 dirtSprite.img = secondLayerAltImg1;
@@ -134,8 +137,8 @@ function drawCeiling(){
     ceilingSprite.h = 48;
     ceilingSprite.y = 0;
     ceilingSprite.x = 0;
-    ceilingSprite.collider = 'kinematic';
-    // dirtSprite.debug = 1
+    ceilingSprite.collider = 'static';
+    // ceilingSprite.debug = 1
 
    
         caveCeilingCount =0;
@@ -167,7 +170,7 @@ function drawCeiling(){
                 ceilingSprite.img = "/assets/dist/img/spriteSheet/ceilingTile.png";
             }
 
-            if(caveCeilingCount%randomRotation == 0){
+            if(caveCeilingCount%randomRotation == 1){
                 ceilingSprite.rotation += 90;
             }
             // console.log(Math.floor(altImg4*5.4));

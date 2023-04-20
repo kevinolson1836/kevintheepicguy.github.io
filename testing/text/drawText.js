@@ -1,6 +1,6 @@
 
 let thisRanAlready = 1;
-function drawTextOnScreen(textStr, x,y, redrawText){
+function drawTextOnScreen(textStr, x,y,textboxWidth,textboxHeight, redrawText){
 
     // console.log("hi th" + "ere");
     if (redrawText && thisRanAlready){
@@ -17,5 +17,5 @@ function drawTextOnScreen(textStr, x,y, redrawText){
         // stopTextLoop = 1;
     }
     // text(text, x,y,width-(width*0.1),height/1.2);
-    text(tempText, 40,50,width-(width*0.1),height/1.2);
+    text(tempText, x,y,textboxWidth,textboxHeight);
 }

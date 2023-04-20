@@ -38,7 +38,7 @@ function drawCaveSprite(){
     caveSprite.x = width;
     caveSprite.y = height - (grassSprite.h + dirtSprite.h) - (caveSprite.h/2);
     caveSprite.scale = playerSprite.scale*2.3; 
-    caveSprite.debug =1;
+    // caveSprite.debug =1;
     caveSprite.visible  = 1;
 }
 
@@ -84,7 +84,7 @@ function drawIntro(){
     // draws text on screen 
     textSize(height/20);
     // textAlign(CENTER);
-    drawTextOnScreen(introTxt,40,50, 1);
+    drawTextOnScreen(introTxt,40,50, width-(width*0.1), height/1.2, 1);
     
     
     // check if player is on the ground and if the scene needs to be updated
