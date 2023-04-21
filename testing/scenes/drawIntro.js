@@ -38,32 +38,34 @@ function drawCaveSprite(){
     caveSprite.x = width;
     caveSprite.y = height - (grassSprite.h + dirtSprite.h) - (caveSprite.h/2);
     caveSprite.scale = playerSprite.scale*2.3; 
-    // caveSprite.debug =1;
+    // caveSprite.debug =1;a
     caveSprite.visible  = 1;
 }
 
 // if player goes into cave or goes left update the sceneIndex and cleanup current scene
-function checkForSceneChange(){
+// function checkForSceneChange(){
     
-    // player goes right
-    if (playerSprite.collides (caveSprite)) {
-        scenesIndex+=1;
-        resetPlayerLocation(); 
-        cleanUpIntro();
-        canMoveAgain = 0;
-        playerSprite.rotation = 0;
-        playerDirection = "right";
-	}
+//     // player goes right
+//     if (playerSprite.collides (rightCollider) || playerSprite.collides (caveSprite)) {
+//         console.log(scenesIndex);
+//         scenesIndex+=1;
+//         resetPlayerLocation(); 
+//         cleanUpIntro();
+//         canMoveAgain = 0;
+//         playerSprite.rotation = 0;
+//         playerDirection = "right";
+// 	}
 
-    // player goes left
-    if (playerSprite.collides (leftCollider)) {
-        scenesIndex-=1;
-        resetPlayerLocation(); 
-        cleanUpIntro();
-        canMoveAgain = 0;
-        playerDirection = "left";
-	}
-}
+//     // player goes left
+//     if (playerSprite.collides (leftCollider)) {
+//         console.log(scenesIndex);
+//         scenesIndex-=1;
+//         resetPlayerLocation(); 
+//         cleanUpIntro();
+//         canMoveAgain = 0;
+//         playerDirection = "left";
+// 	}
+// }
 
 
 // main function to call to draw the scene
@@ -89,6 +91,6 @@ function drawIntro(){
     
     // check if player is on the ground and if the scene needs to be updated
     checkGroundColid();
-    checkForSceneChange();
+    // checkForSceneChange();
 };
 

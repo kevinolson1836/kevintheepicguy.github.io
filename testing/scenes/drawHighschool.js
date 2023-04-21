@@ -107,3 +107,21 @@ function drawHighschool(){
     drawChairs();
 
 }
+
+
+function cleanupHighschool_scene1(){
+    // remove from screen
+    chairSprite.visible = 0;
+    chairSprite2.visible = 0;
+    chairSprite3.visible = 0;
+    ceilingSprite.visible = 0;
+    chalkBoardSprite.visible = 0;
+
+    // remove collider
+    chairSprite.collider = "none";
+    chairSprite2.collider = "none";
+    chairSprite3.collider = "none";
+    ceilingSprite.collider = "none";
+    chalkBoardSprite.collider = "none";
+
+}

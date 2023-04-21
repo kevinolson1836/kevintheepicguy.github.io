@@ -123,6 +123,8 @@ function drawGround(topLayerImg, topLayerAltImg, topLayerAltImg2, secondLayerMai
 let caveCeilingCount =0;
 
 
+
+
 function drawCeiling(){
 
     if(drawCeilingFirstRan){
@@ -178,7 +180,57 @@ function drawCeiling(){
         }
         
     }
+}
 
 
+function drawCeilingCave2(){
 
+// ceiling sprite
+    ceilingSprite.img = "/assets/dist/img/spriteSheet/ceilingTile.png";
+    ceilingSprite.scale =3;
+    ceilingSprite.w = 48;
+    ceilingSprite.h = 48;
+    ceilingSprite.y = 0;
+    ceilingSprite.x = 0;
+    ceilingSprite.collider = 'static';
+    // ceilingSprite.debug = 1
+
+   
+        caveCeilingCount =0;
+    
+
+     //loop until number of cells that fit verticals +1 (adding one because divide by 0 is infinity) 
+     for(let y=1; y < Math.floor((height/48)/2)+1; y+=1){
+        ceilingSprite.y = (y-1)*48;
+    
+        //loop until number of cells that fit horizontally divied by vertical cell id
+        for(let x =Math.floor((width/48)/y) +1; x > -2; x-=1){
+            ceilingSprite.x = x*48;
+            if(0 == caveCeilingCount%18){
+                ceilingSprite.img = "/assets/dist/img/spriteSheet/ceilingTile2.png";
+                ceilingSprite.draw();
+                ceilingSprite.img = "/assets/dist/img/spriteSheet/ceilingTile.png";
+            }
+            else if(0 == caveCeilingCount%14){
+                ceilingSprite.img = "/assets/dist/img/spriteSheet/ceilingTile3.png";
+                ceilingSprite.draw();
+                ceilingSprite.img = "/assets/dist/img/spriteSheet/ceilingTile.png";
+            }
+            else if(0 == caveCeilingCount%21){
+                ceilingSprite.img = "/assets/dist/img/spriteSheet/ceilingTile4.png";
+                ceilingSprite.draw();
+                ceilingSprite.img = "/assets/dist/img/spriteSheet/ceilingTile.png";
+            } else {
+                ceilingSprite.img = "/assets/dist/img/spriteSheet/ceilingTile.png";
+                ceilingSprite.draw();
+            }
+
+            if(caveCeilingCount%randomRotation == 1){
+                ceilingSprite.rotation += 90;
+            }
+            // console.log(Math.floor(altImg4*5.4));
+            caveCeilingCount++;
+        }
+        
+    }
 }

@@ -37,7 +37,7 @@ const groundHeight = 75;
 let canJump = 1;
 let canMoveAgain = 1;
 const jumpHeight = 6;
-const moveSpeed = 8;
+const moveSpeed = 12;
 let playerDirection = "right";
 
 let leftCollider;
@@ -140,6 +140,31 @@ function checkGroundColid(){
 }
 
 
+// function checkForSceneChange(){
+    
+//     // player goes right
+//     if (playerSprite.collides (rightCollider) || playerSprite.collides (caveSprite)) {
+//         console.log(scenesIndex);
+//         scenesIndex+=1;
+//         resetPlayerLocation(); 
+//         cleanUpIntro();
+//         canMoveAgain = 0;
+//         playerSprite.rotation = 0;
+//         playerDirection = "right";
+// 	}
+
+//     // player goes left
+//     if (playerSprite.collides (leftCollider)) {
+//         console.log(scenesIndex);
+//         scenesIndex-=1;
+//         resetPlayerLocation(); 
+//         cleanUpIntro();
+//         canMoveAgain = 0;
+//         playerDirection = "left";
+// 	}
+// }
+
+
 
 
 // the main loop. try's to call it 60 times a second
@@ -186,8 +211,7 @@ function draw() {
           
         // draws the drawIndianaState scene 
         case 2: 
-            drawIndianaState();
-            console.log("dddd");
+            drawHighschool2();
 
               // must break out of the case to not call every other case
               break;
@@ -209,8 +233,8 @@ function draw() {
     }
     
     // checks if player touches edge of the screen to draw the next/previous scene
-    checkCollitionWithLeftCollider();
-    checkCollitionWithRightCollider();
+    checkCollitionWithLeftCollider(scenesIndex);
+    checkCollitionWithRightCollider(scenesIndex);
     
     // dont let the scenesIndex go below 0
     if (scenesIndex < 0){

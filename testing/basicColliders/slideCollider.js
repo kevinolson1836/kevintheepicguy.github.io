@@ -12,11 +12,30 @@ function drawLeftCollider(){
 
 
 // if player collides with the end of the  screen on the left subtract the sceneIndex to draw the previous one
-function checkCollitionWithLeftCollider(){
+function checkCollitionWithLeftCollider(sceneIndex){
     if (playerSprite.collides(leftCollider)){
-        scenesIndex -=1;
         resetPlayerLocation();
         thisRanAlready = 1;
+        switch (sceneIndex){
+            case 0:
+                break
+
+            case 1:
+                cleanupHighschool_scene1();
+                break
+
+            case 2:
+                break
+
+            case 3:
+                break
+
+            case 4: 
+                break
+            
+        }
+
+        scenesIndex -=1;
 
     }
 }
@@ -43,7 +62,7 @@ function drawRightCollider(){
 
 // if player collides with the end of the  screen on the right
 function checkCollitionWithRightCollider(){
-    if (playerSprite.collides(rightCollider)){
+    if (playerSprite.collides(rightCollider) || playerSprite.collides (caveSprite)){
 
         // a work around to the bad implementation of the niceTryBuddy scene.
         // else change the scene to the next one in the list
@@ -53,9 +72,30 @@ function checkCollitionWithRightCollider(){
             scenesIndex +=1;
         }
 
+        console.log(scenesIndex);
+        
+        switch (scenesIndex){
+            case 0:
+                break
+
+            case 1:
+                cleanUpIntro();
+                break
+
+            case 2:
+                break
+
+            case 3:
+                break
+
+            case 4: 
+                break
+            
+        }
         // reset player
         resetPlayerLocation();
         thisRanAlready = 1;
+        
         
     }
 }
