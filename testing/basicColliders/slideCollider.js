@@ -25,6 +25,7 @@ function checkCollitionWithLeftCollider(sceneIndex){
                 break
 
             case 2:
+                cleanupHighschool_scene2();
                 break
 
             case 3:
@@ -83,9 +84,11 @@ function checkCollitionWithRightCollider(){
                 break
 
             case 2:
+                cleanupHighschool_scene1();
                 break
 
             case 3:
+                cleanupHighschool_scene2();
                 break
 
             case 4: 

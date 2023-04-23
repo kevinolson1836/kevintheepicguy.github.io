@@ -3,21 +3,23 @@ let drawHighschool2FirstRan = 1;
 
 
 async function squareTurtleSequence() {
-    let moveDistX = chalkBoardSprite.w/3
-    let moveDistY = chalkBoardSprite.h/3
-	await turtle.moveTo(chalkBoardSprite.x-moveDistX,chalkBoardSprite.y,5);
-	await turtle.rotateTo(chalkBoardSprite.x-moveDistX,chalkBoardSprite.y-moveDistY,3);
-
-    await turtle.moveTo(chalkBoardSprite.x-moveDistX,chalkBoardSprite.y-moveDistY,5);
-	await turtle.rotateTo(chalkBoardSprite.x+moveDistX,chalkBoardSprite.y-moveDistY,3);
+    if (turtle.visible == 1){
+        let moveDistX = chalkBoardSprite.w/3
+        let moveDistY = chalkBoardSprite.h/3
+        await turtle.moveTo(chalkBoardSprite.x-moveDistX,chalkBoardSprite.y,5);
+        await turtle.rotateTo(chalkBoardSprite.x-moveDistX,chalkBoardSprite.y-moveDistY,3);
     
-    await turtle.moveTo(chalkBoardSprite.x+moveDistX,chalkBoardSprite.y-moveDistY,5);
-	await turtle.rotateTo(chalkBoardSprite.x+moveDistX,chalkBoardSprite.y,3);
+        await turtle.moveTo(chalkBoardSprite.x-moveDistX,chalkBoardSprite.y-moveDistY,5);
+        await turtle.rotateTo(chalkBoardSprite.x+moveDistX,chalkBoardSprite.y-moveDistY,3);
+        
+        await turtle.moveTo(chalkBoardSprite.x+moveDistX,chalkBoardSprite.y-moveDistY,5);
+        await turtle.rotateTo(chalkBoardSprite.x+moveDistX,chalkBoardSprite.y,3);
+        
+        await turtle.moveTo(chalkBoardSprite.x+moveDistX,chalkBoardSprite.y,5);
+        await turtle.rotateTo(chalkBoardSprite.x-moveDistX,chalkBoardSprite.y,3);
     
-    await turtle.moveTo(chalkBoardSprite.x+moveDistX,chalkBoardSprite.y,5);
-	await turtle.rotateTo(chalkBoardSprite.x-moveDistX,chalkBoardSprite.y,3);
-
-	squareTurtleSequence();
+        squareTurtleSequence();
+    }
 }
 
 
@@ -67,13 +69,24 @@ function drawHighschool2(){
     ); // makes the ground 
     drawCeilingCave2();
 
-   
-   
-   
-    let textStr = "In this next room you see that the same chalkboard from the last room is here again, but the crptic code is gone and replaced with something called a Turtle...\n\nYou also cant help to notcie that the chalkboard looks like it was just scaled up and looks blurry, however the game maker would never be that lazy, that was on purpose *wink* *wink*"
-    textSize(height/30);
+    let textStr = "As you enter the next room, you notice the same chalkboard from the previous room. However, the cryptic code has been replaced by a shape that you remember fondly - a Turtle! You remember this as your very first introduction to programming in high school and when you fell in love with programming.\n\nYou also can't help but notice that the chalkboard looks blurry and as if it was just scaled up from a previously used asset. Nevertheless, you know that the game maker would never be that lazy and reuse the same asset twice *wink* *wink*.\n\nThe Adventure is feeling nostalgic and wanting to reminisce about old memories of programming, so the Adventure moves on to the next room."
+
+    textSize(height/40);
     drawTextOnScreen(textStr, width/2 - (width/6),200, width/1.5, height/2, 1)
 
     drawChalkboard();
+
+}
+
+
+
+function cleanupHighschool_scene2(){
+    chalkBoardSprite.visible = 0;
+    chalkBoardSprite.collider = "none";
+    
+    turtle.visible = 0;
+    turtle.collider =  "none";
+
+    drawHighschool2FirstRan =1;
 
 }

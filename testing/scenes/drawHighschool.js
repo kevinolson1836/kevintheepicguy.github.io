@@ -100,8 +100,8 @@ function drawHighschool(){
    
    
    
-    let textStr = "You, the player, find yourself stumbling into a dark and mysterious cave. As you make your way deeper, you notice strange chairs and an old chalkboard covered in cryptic code. But there's something odd about this cave - the physics seem off….\n\nSuddenly, you hear a voice in your head - the voice of the game maker. It tells you that you've been chosen to take part in a unique adventure, one that will take you on a journey of discovery.\n\nAs you begin to explore the cave, you realize that this is not just any adventure game - it's a self-aware game that's mirroring the game maker‘s own journey of learning how to program."
-    textSize(height/30);
+    let textStr = "You, the player, find yourself stumbling into a dark and mysterious cave. As you make your way deeper, you notice strange chairs and an old chalkboard covered in cryptic code. But there's something odd about this cave - the physics seem off….\n\nSuddenly, you hear a voice in your head - the voice of the game maker. It tells you that you've been chosen to take part in a unique adventure, one that will take you on a journey of discovery.\n\nAs you begin to explore the cave, you realize that this is not just any adventure game - the game is  mirroring the game maker‘s own journey of learning how to program."
+    textSize(height/40);
     drawTextOnScreen(textStr, width/2 - (width/6),200, width/1.5, height/2, 1)
 
     drawChairs();
@@ -123,5 +123,7 @@ function cleanupHighschool_scene1(){
     chairSprite3.collider = "none";
     ceilingSprite.collider = "none";
     chalkBoardSprite.collider = "none";
+    drawHighschoolFirstRan = 1;
+    console.log("cleaned")
 
 }

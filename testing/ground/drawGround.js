@@ -203,7 +203,7 @@ function drawCeilingCave2(){
      for(let y=1; y < Math.floor((height/48)/2)+1; y+=1){
         ceilingSprite.y = (y-1)*48;
     
-        //loop until number of cells that fit horizontally divied by vertical cell id
+        //loop until number of cells that fit horizontally divide by vertical cell id
         for(let x =Math.floor((width/48)/y) +1; x > -2; x-=1){
             ceilingSprite.x = x*48;
             if(0 == caveCeilingCount%18){
