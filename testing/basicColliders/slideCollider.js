@@ -29,6 +29,8 @@ function checkCollitionWithLeftCollider(sceneIndex){
                 break
 
             case 3:
+                console.log("retunerd")
+                returnedFromNextRoom =1;
                 break
 
             case 4: 
@@ -89,6 +91,7 @@ function checkCollitionWithRightCollider(){
 
             case 3:
                 cleanupHighschool_scene2();
+                returnedFromNextRoom =1;
                 break
 
             case 4: 
