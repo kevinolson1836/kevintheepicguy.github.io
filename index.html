@@ -6,6 +6,8 @@
     <title>Kevin</title>
     <link rel="icon" href="assets/dist/img/kevin2.png" type="image/icon type">
 
+    <!-- ml5 for img recognition -->
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind">
 
@@ -184,7 +186,9 @@
             <!-- start of cool animation-->
             <!-- resume section. deafult is closed and hiden -->
               <div id="collapseExampleMain" class="drawingSection">
-                <h1>Draw on me! <h5>(shape recognition coming soon)</h5></h1>
+                <h1 id="header">Draw on me!</h1>
+                <h2 id="answer">I will try tell you what you made</h2>
+                <h4 id="percent">im not that good</h4>
                 <script src="assets/dist/js/drawing.js" ></script>
               </div>
           <!-- <div>section above resume</div> -->
@@ -569,4 +573,6 @@
   
 
 </body>
+
+
 </html>
