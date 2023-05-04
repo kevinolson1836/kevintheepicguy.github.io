@@ -270,3 +270,53 @@
 .custom-col{
   padding: 1%;
 }
+
+.extend{
+ background-color: #c10528;
+ height: 40px;
+ transition: height 1s;
+}
+
+
+/* 
+.extend:hover{
+  background-color: pink;
+  height: 200px;
+} */
+
+.DivForHoverItem {
+  /*just so we can see it*/
+  height: 50px;
+  width: 300px;
+  background-color: red;
+  transition: height 2s;
+}
+
+.HiddenText {
+  display: none;
+  animation: fadeIn 0.4s;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.DivForHoverItem:hover{
+  display: inline-block;
+  height: 100px;
+  background-color: green;
+}
+
+
+.DivForHoverItem:hover .HiddenText {
+  display: block;
+  background-color: violet;
+}
+
+.row-20{
+  background-color: yellow;
+}
+
+.row-80{
+  background-color: aqua;
+}
