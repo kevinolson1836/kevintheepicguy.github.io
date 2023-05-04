@@ -283,8 +283,12 @@
   background-color: pink;
   height: 200px;
 } */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
-.DivForHoverItem {
+.DivForHoverItem1 {
   /*just so we can see it*/
   height: 50px;
   width: 300px;
@@ -292,31 +296,76 @@
   transition: height 2s;
 }
 
-.HiddenText {
+.HiddenText1 {
   display: none;
   animation: fadeIn 0.4s;
 }
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
 
-.DivForHoverItem:hover{
+.DivForHoverItem1:hover{
   display: inline-block;
   height: 100px;
   background-color: green;
 }
 
 
-.DivForHoverItem:hover .HiddenText {
+.DivForHoverItem1:hover .HiddenText1 {
   display: block;
   background-color: violet;
 }
 
-.row-20{
-  background-color: yellow;
+
+
+
+.DivForHoverItem2 {
+  /*just so we can see it*/
+  height: 50px;
+  width: 300px;
+  background-color: red;
+  transition: height 2s;
 }
 
-.row-80{
-  background-color: aqua;
+.HiddenText2 {
+  display: none;
+  animation: fadeIn 0.4s;
+}
+
+.DivForHoverItem2:hover{
+  display: inline-block;
+  height: 100px;
+  background-color: green;
+}
+
+
+.DivForHoverItem2:hover .HiddenText2 {
+  display: block;
+  background-color: violet;
+}
+
+
+
+
+
+.DivForHoverItem3 {
+  /*just so we can see it*/
+  height: 50px;
+  width: 300px;
+  background-color: red;
+  transition: height 2s;
+}
+
+.HiddenText3 {
+  display: none;
+  animation: fadeIn 0.4s;
+}
+
+.DivForHoverItem3:hover{
+  display: inline-block;
+  height: 100px;
+  background-color: green;
+}
+
+
+.DivForHoverItem3:hover .HiddenText3 {
+  display: block;
+  background-color: violet;
 }
