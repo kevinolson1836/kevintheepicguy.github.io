@@ -28,13 +28,13 @@
     <script src="assets/dist/js/custom.js"></script>
     
     <script src="assets/dist/js/sidebars.js"></script>
+
+    <script src="assets/dist/js/showandhide.js"></script>
     
     <script src="assets/dist/js/jquery.js"></script>
     <link href="assets/dist/css/custom.css" rel="stylesheet">
 
-    <!-- axe -->
-    <script src="https://rouninmedia.github.io/axe/axe.js"></script>
-
+   
     <!-- Custom styles for this template -->
     <link href="assets/dist/css/sidebars.css" rel="stylesheet">
   </head>
@@ -561,34 +561,34 @@
         <div class="col-sm-9 row-80">
           
           <!-- section1 -->
-          <div class="DivForHoverItem1">
-            <h1>Project1</h1>
-            <div class="HiddenText1">
+          <div id='item1' class="DivForHoverItem1" onmouseenter="showDiv('item1')" onmouseleave="hideDiv('item1')">
+            <h1>Air-Mouse</h1>
+            <div class="HiddenText">
               <ul>
-                <li>idea1</li>
-                <li>idea2</li>
-                <li>idea3</li>
+                <li>utilized BLE connectivity</li>
+                <li>Hardware concepts</li>
+                <li>etc</li>
                 <li>idea4</li>
               </ul>
             </div>
           </div>
           <!-- section2 -->
-          <div class="DivForHoverItem2">
-            <h1>Project2</h1>
-            <div class="HiddenText2">
+          <div id='item2' class="DivForHoverItem1" onmouseenter="showDiv('item2')" onmouseleave="hideDiv('item2')">
+            <h1>Client Website</h1>
+            <div class="HiddenText">
               <ul>
-                <li>idea1</li>
-                <li>idea2</li>
-                <li>idea3</li>
+                <li>HTML/CSS/PHP</li>
+                <li>Launched the website</li>
+                <li>Teamwork</li>
                 <li>idea4</li>
               </ul>
             </div>
           </div>
 
           <!-- section3 -->
-          <div class="DivForHoverItem3">
+          <div id='item3' class="DivForHoverItem1" onmouseenter="showDiv('item3')" onmouseleave="hideDiv('item3')">
             <h1>Project3</h1>
-            <div class="HiddenText3">
+            <div class="HiddenText">
               <ul>
                 <li>idea1</li>
                 <li>idea2</li>
