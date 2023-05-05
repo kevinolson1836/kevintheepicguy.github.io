@@ -285,14 +285,33 @@
 }
 
 .DivForHoverItem1 {
+  background-color: #e2e8df;
   transition: height 2s;
 }
 
 .HiddenText {
   display: none;
+  width:  100%;
   animation: fadeIn 1s;
 }
 
 .DivForHoverItem1:hover{
   display: inline-block;
+  width:  100%;
+}
+
+ul{
+  font-size: 20px;
+}
+
+.slow-indent{
+  transition: margin-left 1s;
+}
+
+.row-81{
+  background-color: violet;
+}
+
+.row-82{
+  background-color: green;
 }
