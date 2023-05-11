@@ -14,33 +14,30 @@ let classifyBtn;
 let loopClassify = false;
 let loopClassifybtn;
 let myCanvas;
+let canvasWidth = 560;
+let canvasHeight = 560;
+let btnWidth = canvasWidth/7;
 
 function setup() {
 
   var width = screen.width  
 
   if(width > 600){
-    myCanvas = createCanvas(560,560);
+    myCanvas = createCanvas(canvasWidth,canvasHeight);
     myCanvas.parent(parentDiv);
     background(200);
   } else{
-    vas(212,212);
-    myCanvas.parent(parentDiv);
-    background(200);
+    // console.log("screen to small for drawing");
+    throw new Error("screen to small for drawing");
   }
 
 
-  // clear screeen
-  clearbtn = createButton('Clear');
-  clearbtn.parent(parentDiv);
-  clearbtn.style("margin-right: 50px;background-color: red;");
-  clearbtn.mousePressed(function (){
-    background(200);
-  })
+  
 
   // Blue stroke
   strokeBlue = createButton('Blue');
   strokeBlue.parent(parentDiv);
+  strokeBlue.style(`margin-left: 30px; margin-right: 20px; background-color: blue; color: white; border-radius: 20px; width: ${btnWidth}px`);
   strokeBlue.mousePressed(function (){
     stroke(0,0,255);
   })
@@ -48,6 +45,7 @@ function setup() {
   // Red stroke
   strokeRed = createButton('Red');
   strokeRed.parent(parentDiv);
+  strokeRed.style(`margin-right: 20px; background-color: red; color: white; border-radius: 20px;; width: ${btnWidth}px`);
   strokeRed.mousePressed(function (){
     stroke(255,0,0);
   })
@@ -55,6 +53,8 @@ function setup() {
   // Green stroke
   strokeGreen = createButton('Green');
   strokeGreen.parent(parentDiv);
+  strokeGreen.style(`margin-right: 20px; background-color: green; color: white; border-radius: 20px;; width: ${btnWidth}px`);
+
   strokeGreen.mousePressed(function (){
     stroke(0,255,0);
   })
@@ -62,6 +62,7 @@ function setup() {
   // Black stroke
   strokeBlack = createButton('Black');
   strokeBlack.parent(parentDiv);
+  strokeBlack.style(`margin-right: 20px; background-color: black; color: white; border-radius: 20px;; width: ${btnWidth}px`);
   strokeBlack.mousePressed(function (){
     stroke(0,0,0);
   })
@@ -69,29 +70,38 @@ function setup() {
   // White stroke
   strokeWhite = createButton('White');
   strokeWhite.parent(parentDiv);
+  strokeWhite.style(`margin-right: 20px; background-color: white; color: black; border-radius: 20px;; width: ${btnWidth}px; margin: auto`);
   strokeWhite.mousePressed(function (){
     stroke(255,255,255);
   })
 
+  // clear screeen
+  clearbtn = createButton('Clear');
+  clearbtn.parent(parentDiv);
+  clearbtn.style(`background-color: red;color: white; width: ${btnWidth}px; display: block;margin: auto; margin-top: 10px; padding-left: 10px; width: 560px; font-size: 20px`);
+  clearbtn.mousePressed(function (){
+    background(200);
+  })
+
   drawingClassifier = ml5.imageClassifier('DoodleNet', modelReady);
 
-  classifyBtn = createButton("Classify!");
-  classifyBtn.style("margin-left: 50px; background-color: green;");
-  classifyBtn.parent(parentDiv);
-  classifyBtn.mousePressed(classifyDrawing);
+  // classifyBtn = createButton("Classify!");
+  // classifyBtn.style("margin-left: 50px; background-color: green;");
+  // classifyBtn.parent(parentDiv);
+  // classifyBtn.mousePressed(classifyDrawing);
 
-  loopClassifybtn = createButton("keep classifying");
-  loopClassifybtn.style("margin-left: 50px; background-color: red;");
-  loopClassifybtn.parent(parentDiv);
-  loopClassifybtn.mousePressed(function(){
-    if(loopClassify === true){
-      loopClassify = false;
-      loopClassifybtn.style("margin-left: 50px; background-color: red;");
-    } else {
-      loopClassify = true;
-      loopClassifybtn.style("margin-left: 50px; background-color: green;");
-    }
-  });
+  // loopClassifybtn = createButton("keep classifying");
+  // loopClassifybtn.style("margin-left: 50px; background-color: red;");
+  // loopClassifybtn.parent(parentDiv);
+  // // loopClassifybtn.mousePressed(function(){
+  //   if(loopClassify === true){
+  //     loopClassify = false;
+  //     loopClassifybtn.style("margin-left: 50px; background-color: red;");
+  //   } else {
+  //     loopClassify = true;
+  //     loopClassifybtn.style("margin-left: 50px; background-color: green;");
+  //   }
+  // });
 
 }
 
