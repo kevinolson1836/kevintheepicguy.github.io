@@ -264,11 +264,13 @@
   }
   .custom-col{
     /* padding: 40%; */
+    transition: transform 0.5s;
   }
 }
 
 .custom-col{
   padding: 1%;
+  transition: transform 0.5s;
 }
 
 .extend{
@@ -306,6 +308,10 @@ ul{
 
 .slow-indent{
   transition: margin-left 1s;
+}
+
+.slow-transition{
+  opacity: 1;
 }
 
 .row-81{

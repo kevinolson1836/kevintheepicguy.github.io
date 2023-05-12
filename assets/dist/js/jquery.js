@@ -36,7 +36,7 @@ $(document).ready(function(){
 function growElement(element){
     $(element).css({
                         'transform': '      scale(' + increaseSize + ',' + increaseSize + ')',
-                        'border': '10px solid grey',
+                       
                         'padding': '0',
                         'z-index': '1000'
                    });
