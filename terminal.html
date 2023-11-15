@@ -9,7 +9,7 @@
             font-family: 'Courier New', monospace;
         }
         #terminal {
-            width: 80%;
+            /* width: 80%; */
             height: 80%;
             margin: 1.5vh auto;
             padding: 10px;
@@ -17,6 +17,9 @@
             background-color: #000;
             color: white;
             min-height: 95vh;
+            max-height: 100vh;
+            min-width: 70vw;
+            max-width: 80vw;
             overflow-y: auto;
             cursor: none;
             caret-color: transparent;
@@ -48,12 +51,22 @@
             color:blue;
         }
 
+        @media screen and (max-width: 899px) {
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
         }
 
+        @media screen and (min-width: 900px) {
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+        
         .row {
             display: grid;
             grid-template-rows: repeat(3, 1fr);
