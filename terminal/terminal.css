@@ -1,0 +1,89 @@
+body {
+    font-family: 'Courier New', monospace;
+    word-wrap: break-word;
+    overflow: auto;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#terminal {
+    width: 80%;
+    /* height: 50%; */
+    margin: 1.5vh auto;
+    padding: 10px;
+    border: 3px solid #ccc;
+    background-color: #0e0e0e;
+    color: white;
+    min-height: 90vh;
+    /* max-width: 90vh; */
+    min-width: 10vw;
+    /* overflow-y: auto; */
+
+    /* cursor: text; */
+    caret-color: transparent;
+    font-size: 20px;
+}
+
+/* using p tags  to change colors and such */
+p{
+    display: inline;
+}
+
+.grey{
+    color: rgb(215, 213, 213);
+}
+
+.dark-grey{
+    color: rgb(12, 128, 128)
+}
+
+.blue{
+    color: rgb(125, 125, 126);
+}
+
+.light-blue{
+    color: rgb(167, 199, 231)
+}
+
+.dark-blue{
+    color:blue;
+}
+
+@media screen and (max-width: 899px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 100px;
+    }
+
+}
+
+.row {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.cell {
+    padding: 10px;
+    text-align: center;
+}
+
+u {
+    text-decoration-thickness: 1px;
+}
+
+b {
+    font-weight: 600;
+}
+
+a {
+    text-decoration-thickness: 1px;
+}
