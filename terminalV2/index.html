@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="English">
+    <head>
+        <title>baby's second term</title>
+        <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
+    </head>
+<body>
+
+    <script>
+
+            function get_image(url) {
+                return new Promise(function(resolve, reject) {
+                    const img = $('<img src="' + url + '"/>');
+                    img.on('load', () => resolve(img));
+                    img.on('error', reject);
+                });
+            }
+            $('body').terminal({
+
+                cat: function() {
+                    return get_image('https://placekitten.com/' + width +
+                                    '/' + height);
+                },
+                
+                title: function() {
+                        return ("he");
+                },
+                
+                dog: function() {
+                        return get_image('https://placedog.net/640/480?random' );
+                }
+            }, 
+            {
+                greetings: 'hairy cock\n'
+            });
+
+        </script>
+
+</body>
+</html>
