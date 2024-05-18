@@ -1,17 +1,27 @@
+<!-- docs  https://terminal.jcubic.pl/documentation.php   -->
+
 <!DOCTYPE html>
 <html lang="English">
     <head>
         <title>baby's second term</title>
         <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/figlet/lib/figlet.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/isomorphic-lolcat"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/xml_formatting.js"></script>
 
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css">
 
         <style>
             .terminal {
             --color: rgba(200, 200, 200, 0.99);
             --background: #0f0f0f;
             --size: 1.5;
+            }
+
+            .command, .directory {
+                cursor: pointer;
             }
         </style>
 
@@ -53,38 +63,22 @@
                                 this terminal. Stay a while and take a look around :)
     </template>
 
+    <template id="greeting3">
 
-    <script>
-        function get_image(url) {
-            return new Promise(function(resolve, reject) {
-                const img = $('<img src="' + url + '"/>');
-                img.on('load', () => resolve(img));
-                img.on('error', reject);
-            });
-        }
-        // $('selector').terminal().set_prompt("bakks");
-        $('body').terminal({
+        ████████╗███████╗██████╗ ███╗   ███╗██╗              ███╗   ██╗███████╗████████╗
+        ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║              ████╗  ██║██╔════╝╚══██╔══╝
+           ██║   █████╗  ██████╔╝██╔████╔██║██║    █████╗    ██╔██╗ ██║█████╗     ██║
+           ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║    ╚════╝    ██║╚██╗██║██╔══╝     ██║
+           ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║              ██║ ╚████║███████╗   ██║
+           ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝              ╚═╝  ╚═══╝╚══════╝   ╚═╝
 
-            
-            cat: function() {
-                return get_image('https://placekitten.com/' + width +
-                '/' + height);
-            },
-            
-                title: function() {
-                    return ("he");
-                },
-                
-                dog: function() {
-                    return get_image('https://placedog.net/640/480?random' );
-                }
-            }, 
-            {
-                prompt: 'user@farts> ', greeting: true,
-                greetings: greeting2.innerHTML
-            });
 
-        </script>
+        Welcome to my Terminal Emulator!
+
+        This is a Unix-like terminal on the web, I have posted my projects within
+        this terminal. Stay a while and take a look around :)
+</template>
+<script src="my-terminal.js"></script>
 
 </body>
 </html>
