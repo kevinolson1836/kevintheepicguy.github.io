@@ -1,0 +1,84 @@
+<!-- docs  https://terminal.jcubic.pl/documentation.php   -->
+
+<!DOCTYPE html>
+<html lang="English">
+    <head>
+        <title>baby's second term</title>
+        <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/figlet/lib/figlet.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/isomorphic-lolcat"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/xml_formatting.js"></script>
+
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css">
+
+        <style>
+            .terminal {
+            --color: rgba(255, 255, 255, 0.99);
+            --background: #0f0f0f;
+            --size: 1.5;
+            }
+
+            .command, .directory {
+                cursor: pointer;
+            }
+        </style>
+
+    </head>
+<body>
+
+    <template id="greeting1">
+    ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+    ║    _           _______                _________       _________    _______     _______      _________    ║
+    ║    | \    /\   (  ____ \   |\     /|   \__   __/       \__   __/   (  ____ \   (  ____ )   (         )   ║
+    ║    |  \  / /   | (    \/   | )   ( |      ) (             ) (      | (    \/   | (    )|   | ()   () |   ║
+    ║    |  (_/ /    | (__       | |   | |      | |    _____    | |      | (__       | (____)|   | |\   /| |   ║
+    ║    |   _ (     |  __)      ( (   ) )      | |   (_____)   | |      |  __)      |     __)   | | (_) | |   ║
+    ║    |  ( \ \    | (          \ \_/ /       | |             | |      | (         | (\ (      | |     | |   ║
+    ║    |  /  \ \   | (____/\     \   /     ___) (___          | |      | (____/\   | ) \ \__   | )     ( |   ║
+    ║    |_/    \/   (_______/      \_/      \_______/          )_(      (_______/   |/   \__/   |/       \|   ║
+    ║                                                                                                          ║
+    ╚══════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+    Welcome to my Terminal Emulator! This is a Unix-like terminal on the web, I have posted my projects with in 
+    this terminal. Stay a while and take a look around :)
+    </template>
+
+
+    <template id="greeting2">
+                                ╔═══════════════════════════════════════════════════════════════════════╗
+                                ║      _______                       _            _   _        _        ║
+                                ║     |__   __|                     (_)          | \ | |      | |       ║
+                                ║        | |   ___  _ __  _ __ ___   _           |  \| |  ___ | |_      ║
+                                ║        | |  / _ \| '__|| '_ ` _ \ | |  ______  | . ` | / _ \| __|     ║
+                                ║        | | |  __/| |   | | | | | || | |______| | |\  ||  __/| |_      ║
+                                ║        |_|  \___||_|   |_| |_| |_||_|          |_| \_| \___| \__|     ║
+                                ║                                                                       ║
+                                ╚═══════════════════════════════════════════════════════════════════════╝
+
+                                Welcome to my Terminal Emulator!
+
+                                This is a Unix-like terminal on the web, I have posted my projects within
+                                this terminal. Stay a while and take a look around :)
+    </template>
+
+    <template id="greeting3">
+
+        ████████╗███████╗██████╗ ███╗   ███╗██╗              ███╗   ██╗███████╗████████╗
+        ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║              ████╗  ██║██╔════╝╚══██╔══╝
+           ██║   █████╗  ██████╔╝██╔████╔██║██║    █████╗    ██╔██╗ ██║█████╗     ██║
+           ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║    ╚════╝    ██║╚██╗██║██╔══╝     ██║
+           ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║              ██║ ╚████║███████╗   ██║
+           ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝              ╚═╝  ╚═══╝╚══════╝   ╚═╝
+
+
+        Welcome to my Terminal Emulator!
+
+        This is a Unix-like terminal on the web, I have posted my projects within
+        this terminal. Stay a while and take a look around :)
+</template>
+<script src="my-terminal.js"></script>
+
+</body>
+</html>
